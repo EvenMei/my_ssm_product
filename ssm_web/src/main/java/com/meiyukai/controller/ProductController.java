@@ -37,7 +37,7 @@ public class ProductController {
          return mav;
     }*/
 
-    @RequestMapping(value = "/findProducts.do")
+    @RequestMapping(value = "/findAll.do")
     public String findAll(Model model , @RequestParam(value = "pageNum") Integer pageNum, @RequestParam(value = "pageSize") Integer pageSize){
         System.out.println("pageNum  :  " + pageNum + "-----"  + "pageSize  :  " + pageSize) ;
         PageInfo<Product> pageInfo = service.getPageInfo(pageNum,pageSize);
@@ -48,16 +48,6 @@ public class ProductController {
     }
 
 
-    @RequestMapping(value = "/findAll.do")
-    @ResponseBody
-    public String findAll(Model model , @RequestBody String info ){
-        System.out.println("requestBody   :  " + info);
-        //System.out.println("pageNum  :  " + pageNum + "-----"  + "pageSize  :  " + pageSize) ;
-       // PageInfo<Product> pageInfo = service.getPageInfo(pageNum,pageSize);
-       // System.out.println("----  pageInfo  ---   " + pageInfo);
-       // model.addAttribute("pageInfo",pageInfo);
-        return "success";
-    }
 
 
 
