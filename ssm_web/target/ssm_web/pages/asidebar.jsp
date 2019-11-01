@@ -105,7 +105,7 @@
                     <ul class="treeview-menu">
 
                         <li id="product-manager">
-                                 <a href="/product/findProducts.do?pageNum=1&pageSize=4">
+                                 <a href="/product/findAll.do?pageNum=1&pageSize=4">
                                 <i class="fa fa-circle-o"></i> 产品管理
                             </a>
                         </li>

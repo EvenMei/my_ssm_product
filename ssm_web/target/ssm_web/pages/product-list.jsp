@@ -100,6 +100,17 @@
 
     <script>
 
+        $(function () {
+            //加载页面的时候 设置下拉框与分页的每页记录数一致
+            $("#select_pageSize option[value='${pageInfo.pageSize}']").prop("selected",true);
+            //监听 下拉框的变化
+            $("#select_pageSize").change(function () {
+                window.location.href="/product/findAll.do?pageNum=1&pageSize="+$(this).val();
+            });
+
+        });
+
+
         /*删除所选的订单*/
         function deleteProduct(){
 
@@ -355,12 +366,12 @@
                     <div class="pull-left">
                         <div class="form-group form-inline">
                             总共${pageInfo.totalPages} 页，共${pageInfo.totalCount}条数据。 每页
-                            <select class="form-control">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
+                            <select class="form-control" id="select_pageSize">
+                                <option value="2">2</option>
+                                <option value="4">4</option>
+                                <option value="6">6</option>
+                                <option value="8">8</option>
+                                <option value="10">10</option>
                             </select> 条
                         </div>
                     </div>
@@ -368,16 +379,16 @@
                     <div class="box-tools pull-right">
                         <ul class="pagination">
                             <li>
-                                <a href="/product/findAll.do?pageNum=1&pageSize=4" aria-label="Previous">首页</a>
+                                <a href="/product/findAll.do?pageNum=1&pageSize=${pageInfo.pageSize}" aria-label="Previous">首页</a>
                             </li>
-                            <li><a href="#">上一页</a></li>
+                            <li><a href="/product/findAll.do?pageNum=${pageInfo.pageNum-1}&pageSize=${pageInfo.pageSize}">上一页</a></li>
                             <c:forEach begin="1" end="${pageInfo.totalPages}" varStatus="s">
-                                <li><a href="#">${s.index}</a></li>
+                                <li><a href="/product/findAll.do?pageNum=${s.index}&pageSize=${pageInfo.pageSize}">${s.index}</a></li>
                             </c:forEach>
-                            <li><a href="#">下一页</a></li>
+                            <li><a href="/product/findAll.do?pageNum=${pageInfo.pageNum+1}&pageSize=${pageInfo.pageSize}">下一页</a></li>
                             <li>
 
-                                <a href="javascript:alterPage(1,3)" aria-label="Next">尾页</a>
+                                <a href="/product/findAll.do?pageNum=${pageInfo.totalPages}&pageSize=${pageInfo.pageSize}" aria-label="Next">尾页</a>
 
                             </li>
                         </ul>

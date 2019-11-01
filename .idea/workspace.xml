@@ -6,11 +6,12 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bec105d8-4f73-4ab9-8c2f-4e0f92d6482a" name="Default Changelist" comment="做到分页屏幕坏了，以此保存一下.">
+    <list default="true" id="bec105d8-4f73-4ab9-8c2f-4e0f92d6482a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ssm_web/src/main/java/com/meiyukai/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ssm_web/src/main/java/com/meiyukai/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/asidebar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/asidebar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/product-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/product-list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ssm_web/target/classes/com/meiyukai/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ssm_web/target/classes/com/meiyukai/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ssm_web/target/ssm_web/WEB-INF/classes/com/meiyukai/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ssm_web/target/ssm_web/WEB-INF/classes/com/meiyukai/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ssm_web/target/ssm_web/pages/asidebar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ssm_web/target/ssm_web/pages/asidebar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ssm_web/target/ssm_web/pages/product-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ssm_web/target/ssm_web/pages/product-list.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -76,8 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ssm_web/src/main/java/com/meiyukai/controller/ProductController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="39" column="37" lean-forward="true" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+            <state relative-caret-position="525">
+              <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,7 +89,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/impl/ProductServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="798">
+            <state relative-caret-position="609">
               <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -97,11 +98,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/product-list.jsp">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/product-add.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1381">
-              <caret line="107" column="67" selection-start-line="107" selection-start-column="67" selection-end-line="107" selection-end-column="67" />
+            <state relative-caret-position="8253">
+              <caret line="393" selection-start-line="393" selection-end-line="393" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/order-detail.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7203">
+              <caret line="343" column="38" selection-start-line="343" selection-start-column="38" selection-end-line="343" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -240,6 +250,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -273,21 +285,10 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ssm_product" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssm_product" type="462c0819:PsiDirectoryNode" />
-              <item name="ssm_web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -296,7 +297,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ssm_web/src/main/webapp/pages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -520,8 +521,24 @@
       <workItem from="1572093077699" duration="7476000" />
       <workItem from="1572107656113" duration="791000" />
       <workItem from="1572108998236" duration="366000" />
-      <workItem from="1572133443392" duration="2852000" />
+      <workItem from="1572133443392" duration="3053000" />
+      <workItem from="1572169802228" duration="190000" />
+      <workItem from="1572178880596" duration="3942000" />
+      <workItem from="1572247070214" duration="47000" />
+      <workItem from="1572247726894" duration="6000" />
+      <workItem from="1572517891227" duration="92000" />
+      <workItem from="1572518166312" duration="694000" />
+      <workItem from="1572525920270" duration="176000" />
+      <workItem from="1572526584903" duration="3000" />
     </task>
+    <task id="LOCAL-00001" summary="完成 分页的操作 包括对下拉框变化的监听">
+      <created>1572144417402</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1572144417402</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -557,11 +574,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114448000" />
+    <option name="totallyTimeSpent" value="119799000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Capture Tool" order="1" />
@@ -569,7 +585,7 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Web" order="4" sideWeight="0.5013774" side_tool="true" weight="0.22460657" />
       <window_info id="Designer" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.4986226" visible="true" weight="0.25608012" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.4986226" visible="true" weight="0.2846924" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Spring" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" />
@@ -583,7 +599,7 @@
       <window_info anchor="bottom" id="Application Servers" order="9" weight="0.18433735" />
       <window_info anchor="bottom" id="Message" order="10" />
       <window_info anchor="bottom" id="Find" order="11" weight="0.32891566" />
-      <window_info active="true" anchor="bottom" id="Run" order="12" visible="true" weight="0.2807229" />
+      <window_info anchor="bottom" id="Run" order="12" weight="0.14457831" />
       <window_info anchor="bottom" id="Debug" order="13" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="14" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="15" weight="0.4" />
@@ -606,7 +622,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="做到分页屏幕坏了，以此保存一下" />
     <MESSAGE value="做到分页屏幕坏了，以此保存一下." />
-    <option name="LAST_COMMIT_MESSAGE" value="做到分页屏幕坏了，以此保存一下." />
+    <MESSAGE value="完成 分页的操作 包括对下拉框变化的监听" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成 分页的操作 包括对下拉框变化的监听" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -751,13 +768,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/product-add.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="358" column="64" lean-forward="true" selection-start-line="358" selection-start-column="64" selection-end-line="358" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ssm_domain/src/main/java/com/meiyukai/ssm/domain/Member.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="882">
@@ -847,13 +857,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="9" column="64" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/order-detail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="356" column="47" selection-start-line="356" selection-start-column="47" selection-end-line="356" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -971,9 +974,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/product-list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5650">
+          <caret line="107" column="67" selection-start-line="107" selection-start-column="67" selection-end-line="107" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/java/com/meiyukai/controller/ProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/impl/ProductServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
+        <state relative-caret-position="609">
           <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -981,20 +1001,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/java/com/meiyukai/controller/ProductController.java">
+    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/product-add.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="39" column="37" lean-forward="true" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="8253">
+          <caret line="393" selection-start-line="393" selection-end-line="393" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/product-list.jsp">
+    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/order-detail.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1381">
-          <caret line="107" column="67" selection-start-line="107" selection-start-column="67" selection-end-line="107" selection-end-column="67" />
+        <state relative-caret-position="7203">
+          <caret line="343" column="38" selection-start-line="343" selection-start-column="38" selection-end-line="343" selection-end-column="38" />
         </state>
       </provider>
     </entry>
