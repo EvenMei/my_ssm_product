@@ -63,20 +63,20 @@
                     </a>
                     <ul class="treeview-menu">
 
-                        <li id="admin-login">
-                            <a href="all-admin-login.html">
+                        <li id="user-manager">
+                            <a href="/user/findAll.do">
                                 <i class="fa fa-circle-o"></i> 用户管理
                             </a>
                         </li>
 
-                        <li id="admin-register">
-                            <a href="all-admin-register.html">
+                        <li id="role-manager">
+                            <a href="/role/findAll.do">
                                 <i class="fa fa-circle-o"></i> 角色管理
                             </a>
                         </li>
 
-                        <li id="admin-404">
-                            <a href="all-admin-404.html">
+                        <li id="permission-manager">
+                            <a href="/permission/findAll.do">
                                 <i class="fa fa-circle-o"></i> 资源权限管理
                             </a>
                         </li>

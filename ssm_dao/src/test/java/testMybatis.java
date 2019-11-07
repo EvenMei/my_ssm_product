@@ -1,11 +1,5 @@
-import com.meiyukai.ssm.dao.IMemeberDao;
-import com.meiyukai.ssm.dao.IOrderDao;
-import com.meiyukai.ssm.dao.IProductDao;
-import com.meiyukai.ssm.dao.ITravellerDao;
-import com.meiyukai.ssm.domain.Member;
-import com.meiyukai.ssm.domain.Orders;
-import com.meiyukai.ssm.domain.Product;
-import com.meiyukai.ssm.domain.Traveller;
+import com.meiyukai.ssm.dao.*;
+import com.meiyukai.ssm.domain.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -31,6 +25,16 @@ public class testMybatis {
 
     @Resource(name = "memberDao")
     private IMemeberDao memberDao;
+
+    @Resource(name = "userDao")
+    private IUserDao userDao;
+
+    @Resource(name = "permissionDao")
+    private IPermissionDao permissionDao;
+
+    @Resource(name = "roleDao")
+    private IRoleDao roleDao;
+
 
 
 
@@ -142,6 +146,81 @@ public class testMybatis {
 
         double ceil = 6.0/4;
         System.out.print(Math.ceil(ceil));
-
     }
+
+
+    @Test
+    public void testFindAllUsers(){
+        List<User> users = userDao.findAll();
+        for(User user :users){
+            System.out.println("------id------"  + user.getId());
+            System.out.println("------username------"+  user.getUsername()) ;
+            System.out.println("--------password--------" +user.getPassword() );
+            System.out.println("-------email----- "  + user.getEmail() );
+            System.out.println("------phoneNum-------"+ user.getPhoneNum());
+            System.out.println("-----------statusStr-----------"+user.getStatusStr());
+            System.out.println("------------roles----------------- " +  user.getRoles());
+            System.out.println("========================================================");
+        }
+    }
+
+
+    @Test
+    public void testFindAllPermissionDao(){
+        List<Permission> permissions = permissionDao.findAll();
+        for(Permission permission : permissions){
+            System.out.println("permission : " + permission);
+        }
+    }
+
+    @Test
+    public void testFindAllRole(){
+        List<Role> roles  = roleDao.findAll();
+        for(Role role: roles){
+            System.out.println("role :  "  + role) ;
+        }
+    }
+
+    @Test
+    public void testFindUserById(){
+        User user  = userDao.findUserById("9790d98297994651968b0b621f6186dd");
+        System.out.println("Userinfo :  " +  user  );
+    }
+
+    @Test
+    public void testFindRoleByUserId(){
+        List<Role> roles = roleDao.findRoleByUserId("9790d98297994651968b0b621f6186dd");
+        for(Role role : roles){
+            System.out.println("role   :  " + role);
+        }
+    }
+
+    @Test
+    public void testFindPermissionByRoleId(){
+        List<Permission> permissions = permissionDao.findPermissionByRoleId("r01");
+        for(Permission permission :  permissions){
+            System.out.println("permission's size is   : "   + permissions.size());
+            System.out.println("   permissions :  " + permission);
+        }
+     }
+
+     @Test
+     public void testFindPermission(){
+         List<Permission> permissions = permissionDao.findPermissionByRoleId("r01");
+         for(Permission permission:  permissions){
+             System.out.println("permission :   "  + permission);
+         }
+
+     }
+
+
+     @Test
+     public void testFindUserByRoleId(){
+        List<User>   users = userDao.findUserByRoleId("r01");
+        for(User user : users ){
+            System.out.println("user    : "  +  user);
+        }
+     }
+
+
 }

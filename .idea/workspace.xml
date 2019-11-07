@@ -8,9 +8,17 @@
   <component name="ChangeListManager">
     <list default="true" id="bec105d8-4f73-4ab9-8c2f-4e0f92d6482a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ssm_web/target/classes/com/meiyukai/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ssm_web/target/classes/com/meiyukai/controller/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ssm_web/target/ssm_web/WEB-INF/classes/com/meiyukai/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ssm_web/target/ssm_web/WEB-INF/classes/com/meiyukai/controller/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ssm_web/target/ssm_web/pages/asidebar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ssm_web/target/ssm_web/pages/asidebar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ssm_dao/src/test/java/testMybatis.java" beforeDir="false" afterPath="$PROJECT_DIR$/ssm_dao/src/test/java/testMybatis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ssm_web/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ssm_web/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/asidebar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/asidebar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/product-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/product-list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ssm_web/target/ssm_web/WEB-INF/lib/ssm_dao-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ssm_web/target/ssm_web/WEB-INF/lib/ssm_dao-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ssm_web/target/ssm_web/WEB-INF/lib/ssm_domain-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ssm_web/target/ssm_web/WEB-INF/lib/ssm_domain-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ssm_web/target/ssm_web/WEB-INF/lib/ssm_service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ssm_web/target/ssm_web/WEB-INF/lib/ssm_service-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ssm_web/target/ssm_web/WEB-INF/lib/ssm_utils-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ssm_web/target/ssm_web/WEB-INF/lib/ssm_utils-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ssm_web/target/ssm_web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ssm_web/target/ssm_web/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ssm_web/target/ssm_web/pages/product-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ssm_web/target/ssm_web/pages/product-list.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -64,7 +72,7 @@
         <item name="MySQL - ssm_product@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="ssm_product: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="product: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="permission: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -74,44 +82,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ssm_web/src/main/java/com/meiyukai/controller/ProductController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/impl/ProductServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/product-add.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8253">
-              <caret line="393" selection-start-line="393" selection-end-line="393" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/order-detail.jsp">
+        <entry file="file://$PROJECT_DIR$/ssm_web/src/main/java/com/meiyukai/controller/PermissionController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7203">
-              <caret line="343" column="38" selection-start-line="343" selection-start-column="38" selection-end-line="343" selection-end-column="38" />
+            <state relative-caret-position="72">
+              <caret line="39" column="88" selection-start-line="39" selection-start-column="88" selection-end-line="39" selection-end-column="88" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ssm_domain/src/main/java/com/meiyukai/ssm/domain/Permission.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="31">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#283#284#0" expanded="true" />
+                <element signature="e#311#312#0" expanded="true" />
+                <element signature="e#357#358#0" expanded="true" />
+                <element signature="e#391#392#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/permission-list.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-19">
+              <caret line="267" column="108" selection-start-line="267" selection-start-column="108" selection-end-line="267" selection-end-column="108" />
             </state>
           </provider>
         </entry>
@@ -122,9 +125,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="spring-beans.schema" />
         <option value="Interface" />
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -151,36 +155,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/basic.jsp" />
-        <option value="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/footer.jsp" />
-        <option value="$PROJECT_DIR$/ssm_web/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/ssm_web/src/main/webapp/plugins/adminLTE/css/AdminLTE.min.css" />
-        <option value="$PROJECT_DIR$/ssm_web/src/main/webapp/plugins/adminLTE/css/skins/_all-skins.css" />
-        <option value="$PROJECT_DIR$/ssm_web/src/main/webapp/plugins/adminLTE/css/skins/_all-skins.min.css" />
-        <option value="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/main.jsp" />
-        <option value="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/all-admin-dataform.html" />
-        <option value="$PROJECT_DIR$/ssm_domain/src/main/java/com/meiyukai/ssm/domain/Product.java" />
-        <option value="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/product-add.jsp" />
-        <option value="$PROJECT_DIR$/ssm_utils/src/main/java/com/meiyukai/ssm/DateConverter.java" />
-        <option value="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/header.jsp" />
-        <option value="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/product_list.jsp" />
-        <option value="$PROJECT_DIR$/ssm_domain/src/main/java/com/meiyukai/ssm/domain/Tralveller.java" />
-        <option value="$PROJECT_DIR$/ssm_domain/src/main/java/com/meiyukai/ssm/domain/domain.java" />
-        <option value="$PROJECT_DIR$/ssm_domain/src/main/java/com/meiyukai/ssm/domain/Member.java" />
-        <option value="$PROJECT_DIR$/ssm_domain/src/main/java/com/meiyukai/ssm/domain/Traveller.java" />
-        <option value="$PROJECT_DIR$/ssm_dao/src/main/resources/SqlMapConfig.xml" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/744fe013-6a88-45e8-8681-1fd3ec3440e9/console_1.sql" />
-        <option value="$PROJECT_DIR$/ssm_dao/src/main/java/com/meiyukai/ssm/dao/IMemeberDao.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/744fe013-6a88-45e8-8681-1fd3ec3440e9/console_2.sql" />
-        <option value="$PROJECT_DIR$/ssm_dao/src/main/java/com/meiyukai/ssm/dao/IOrderTravellerDao.java" />
-        <option value="$PROJECT_DIR$/ssm_domain/src/main/java/com/meiyukai/ssm/domain/OrderTravellers.java" />
-        <option value="$PROJECT_DIR$/ssm_dao/src/main/java/com/meiyukai/ssm/dao/ITravellerDao.java" />
-        <option value="$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/IMemberService.java" />
-        <option value="$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/impl/Order.java" />
-        <option value="$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/impl/MemberServiceImpl.java" />
-        <option value="$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/impl/TravellerServiceImpl.java" />
-        <option value="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/order-ad.jsp" />
-        <option value="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/order-add.jsp" />
         <option value="$PROJECT_DIR$/ssm_domain/src/main/java/com/meiyukai/ssm/domain/Orders.java" />
         <option value="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/orders-list.jsp" />
         <option value="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/all-tables-data.html" />
@@ -189,19 +163,49 @@
         <option value="$PROJECT_DIR$/ssm_web/src/main/java/com/meiyukai/controller/orderController.java" />
         <option value="$PROJECT_DIR$/ssm_dao/src/main/java/com/meiyukai/ssm/dao/IOrderDao.java" />
         <option value="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/order-detail.jsp" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/ssm_dao/src/main/resources/applicationContext-dao.xml" />
         <option value="$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/ITravellerService.java" />
         <option value="$PROJECT_DIR$/ssm_domain/src/main/java/com/meiyukai/ssm/domain/PageInfo.java" />
         <option value="$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/IProductService.java" />
         <option value="$PROJECT_DIR$/ssm_dao/src/main/java/com/meiyukai/ssm/dao/IProductDao.java" />
-        <option value="$PROJECT_DIR$/ssm_dao/src/test/java/testMybatis.java" />
         <option value="$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/impl/ProductServiceImpl.java" />
         <option value="$PROJECT_DIR$/ssm_web/src/main/resources/springmvc.xml" />
-        <option value="$PROJECT_DIR$/ssm_web/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/asidebar.jsp" />
         <option value="$PROJECT_DIR$/ssm_web/src/main/java/com/meiyukai/controller/ProductController.java" />
         <option value="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/product-list.jsp" />
+        <option value="$PROJECT_DIR$/ssm_domain/src/main/java/com/meiyukai/ssm/domain/UserInfo.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/ssm_web/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/impl/IUserService.java" />
+        <option value="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/main.jsp" />
+        <option value="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/user.jsp" />
+        <option value="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/user-add.jsp" />
+        <option value="$PROJECT_DIR$/ssm_web/src/main/resources/spring-security.xml" />
+        <option value="$PROJECT_DIR$/ssm_utils/src/main/java/com/meiyukai/ssm/BCryptPasswordEncoderUtild.java" />
+        <option value="$PROJECT_DIR$/ssm_utils/src/main/java/com/meiyukai/ssm/BCryptPasswordEncoderUtils.java" />
+        <option value="$PROJECT_DIR$/ssm_domain/src/main/java/com/meiyukai/ssm/domain/Permission.java" />
+        <option value="$PROJECT_DIR$/ssm_domain/src/main/java/com/meiyukai/ssm/domain/Role.java" />
+        <option value="$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/IUserService.java" />
+        <option value="$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/impl/UserService.java" />
+        <option value="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/user-detai.jsp" />
+        <option value="$PROJECT_DIR$/ssm_dao/src/main/java/com/meiyukai/ssm/dao/IUserDao.java" />
+        <option value="$PROJECT_DIR$/ssm_dao/src/test/java/testMybatis.java" />
+        <option value="$PROJECT_DIR$/ssm_domain/src/main/java/com/meiyukai/ssm/domain/User.java" />
+        <option value="$PROJECT_DIR$/ssm_web/src/main/java/com/meiyukai/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/user-detail.jsp" />
+        <option value="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/user-list.jsp" />
+        <option value="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/role-add.jsp" />
+        <option value="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/role-list.jsp" />
+        <option value="$PROJECT_DIR$/ssm_dao/src/main/java/com/meiyukai/ssm/dao/IRoleDao.java" />
+        <option value="$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/IRoleService.java" />
+        <option value="$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/impl/RoleService.java" />
+        <option value="$PROJECT_DIR$/ssm_web/src/main/java/com/meiyukai/controller/RoleController.java" />
+        <option value="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/asidebar.jsp" />
+        <option value="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/permission-add.jsp" />
+        <option value="$PROJECT_DIR$/ssm_dao/src/main/java/com/meiyukai/ssm/dao/IPermissionDao.java" />
+        <option value="$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/IPermissionService.java" />
+        <option value="$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/impl/PermissionService.java" />
+        <option value="$PROJECT_DIR$/ssm_web/src/main/java/com/meiyukai/controller/PermissionController.java" />
+        <option value="$PROJECT_DIR$/ssm_web/src/main/webapp/pages/permission-list.jsp" />
       </list>
     </option>
   </component>
@@ -231,27 +235,23 @@
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="ssm_dao" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="ssm_dao" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
       </expand>
       <select />
     </treeState>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="height" value="820" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -262,6 +262,199 @@
             <path>
               <item name="ssm_product" type="b2602c69:ProjectViewProjectNode" />
               <item name="ssm_product" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssm_product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm_product" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_dao" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssm_product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm_product" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_dao" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssm_product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm_product" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_dao" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssm_product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm_product" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_dao" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssm_product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm_product" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_dao" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="meiyukai" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssm_product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm_product" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_dao" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="meiyukai" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssm_product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm_product" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_dao" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="meiyukai" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssm_product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm_product" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_dao" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssm_product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm_product" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_dao" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssm_product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm_product" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssm_product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm_product" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_domain" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssm_product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm_product" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssm_product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm_product" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssm_product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm_product" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssm_product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm_product" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssm_product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm_product" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssm_product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm_product" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="meiyukai" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssm_product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm_product" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="meiyukai" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssm_product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm_product" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="meiyukai" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssm_product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm_product" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="meiyukai" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssm_product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm_product" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssm_product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm_product" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_utils" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssm_product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm_product" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_utils" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssm_product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm_product" type="462c0819:PsiDirectoryNode" />
               <item name="ssm_web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -276,6 +469,44 @@
               <item name="ssm_web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssm_product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm_product" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssm_product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm_product" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssm_product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm_product" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="meiyukai" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssm_product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm_product" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="meiyukai" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ssm_product" type="b2602c69:ProjectViewProjectNode" />
@@ -285,10 +516,20 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ssm_product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssm_product" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -331,52 +572,52 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 7.0.94">
-    <configuration name="testMybatis.test04" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.testMybatis.testFindAllRole">
+    <configuration name="testMybatis.testFindAllPermissionDao" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ssm_dao" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="testMybatis" />
-      <option name="METHOD_NAME" value="test04" />
+      <option name="METHOD_NAME" value="testFindAllPermissionDao" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testMybatis.testCommon" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="testMybatis.testFindAllRole" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ssm_dao" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="testMybatis" />
-      <option name="METHOD_NAME" value="testCommon" />
+      <option name="METHOD_NAME" value="testFindAllRole" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testMybatis.testFindTotalCountFromProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="testMybatis.testFindAllUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ssm_dao" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="testMybatis" />
-      <option name="METHOD_NAME" value="testFindTotalCountFromProduct" />
+      <option name="METHOD_NAME" value="testFindAllUsers" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testMybatis.testFindzOrderById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="testMybatis.testFindPermission" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ssm_dao" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="testMybatis" />
-      <option name="METHOD_NAME" value="testFindzOrderById" />
+      <option name="METHOD_NAME" value="testFindPermission" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testMybatis.testMemberDao" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="testMybatis.testFindUserByRoleId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ssm_dao" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="testMybatis" />
-      <option name="METHOD_NAME" value="testMemberDao" />
+      <option name="METHOD_NAME" value="testFindUserByRoleId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -408,6 +649,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Tomcat 7.0.94" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.94" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8085/" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=utf-8" />
       <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
@@ -421,6 +663,8 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_ssm_product" />
+        <option name="HTTP_PORT" value="8085" />
+        <option name="JNDI_PORT" value="1095" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -483,21 +727,21 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.testMybatis.test04" />
-      <item itemvalue="JUnit.testMybatis.testMemberDao" />
-      <item itemvalue="JUnit.testMybatis.testFindzOrderById" />
-      <item itemvalue="JUnit.testMybatis.testFindTotalCountFromProduct" />
-      <item itemvalue="JUnit.testMybatis.testCommon" />
       <item itemvalue="Maven.ssm_product" />
       <item itemvalue="Tomcat Server.Tomcat 7.0.94" />
+      <item itemvalue="JUnit.testMybatis.testFindPermission" />
+      <item itemvalue="JUnit.testMybatis.testFindAllPermissionDao" />
+      <item itemvalue="JUnit.testMybatis.testFindUserByRoleId" />
+      <item itemvalue="JUnit.testMybatis.testFindAllUsers" />
+      <item itemvalue="JUnit.testMybatis.testFindAllRole" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.testMybatis.testCommon" />
-        <item itemvalue="JUnit.testMybatis.testFindTotalCountFromProduct" />
-        <item itemvalue="JUnit.testMybatis.testFindzOrderById" />
-        <item itemvalue="JUnit.testMybatis.test04" />
-        <item itemvalue="JUnit.testMybatis.testMemberDao" />
+        <item itemvalue="JUnit.testMybatis.testFindAllRole" />
+        <item itemvalue="JUnit.testMybatis.testFindAllUsers" />
+        <item itemvalue="JUnit.testMybatis.testFindUserByRoleId" />
+        <item itemvalue="JUnit.testMybatis.testFindPermission" />
+        <item itemvalue="JUnit.testMybatis.testFindAllPermissionDao" />
       </list>
     </recent_temporary>
   </component>
@@ -530,6 +774,11 @@
       <workItem from="1572518166312" duration="694000" />
       <workItem from="1572525920270" duration="176000" />
       <workItem from="1572526584903" duration="3000" />
+      <workItem from="1572590041706" duration="1091000" />
+      <workItem from="1572594417556" duration="364000" />
+      <workItem from="1572605897479" duration="111000" />
+      <workItem from="1572957344000" duration="603000" />
+      <workItem from="1573002655456" duration="27024000" />
     </task>
     <task id="LOCAL-00001" summary="完成 分页的操作 包括对下拉框变化的监听">
       <created>1572144417402</created>
@@ -538,43 +787,50 @@
       <option name="project" value="LOCAL" />
       <updated>1572144417402</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="完成 分页的操作 包括对下拉框变化的监听">
+      <created>1572590138878</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1572590138879</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="testMybatis_testFindzOrderById - 2019.10.26 at 10h 24m 41s.xml">
-      <configuration name="testMybatis.testFindzOrderById" configurationId="JUnit" />
+    <history-entry file="testMybatis_testFindPermission - 2019.11.06 at 19h 32m 33s.xml">
+      <configuration name="testMybatis.testFindPermission" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="testMybatis_testFindzOrderById - 2019.10.26 at 10h 28m 52s.xml">
-      <configuration name="testMybatis.testFindzOrderById" configurationId="JUnit" />
+    <history-entry file="testMybatis_testFindUserByRoleId - 2019.11.06 at 19h 32m 38s.xml">
+      <configuration name="testMybatis.testFindUserByRoleId" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="testMybatis_testFindzOrderById - 2019.10.26 at 10h 33m 23s.xml">
-      <configuration name="testMybatis.testFindzOrderById" configurationId="JUnit" />
+    <history-entry file="testMybatis_testFindUserByRoleId - 2019.11.06 at 19h 36m 44s.xml">
+      <configuration name="testMybatis.testFindUserByRoleId" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="testMybatis_testFindzOrderById - 2019.10.26 at 10h 34m 14s.xml">
-      <configuration name="testMybatis.testFindzOrderById" configurationId="JUnit" />
+    <history-entry file="testMybatis_testFindUserByRoleId - 2019.11.06 at 19h 48m 43s.xml">
+      <configuration name="testMybatis.testFindUserByRoleId" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="testMybatis_testFindzOrderById - 2019.10.26 at 10h 36m 19s.xml">
-      <configuration name="testMybatis.testFindzOrderById" configurationId="JUnit" />
+    <history-entry file="testMybatis_testFindUserByRoleId - 2019.11.06 at 19h 50m 44s.xml">
+      <configuration name="testMybatis.testFindUserByRoleId" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="testMybatis_testFindzOrderById - 2019.10.26 at 10h 38m 20s.xml">
-      <configuration name="testMybatis.testFindzOrderById" configurationId="JUnit" />
+    <history-entry file="testMybatis_testFindAllUsers - 2019.11.06 at 23h 01m 26s.xml">
+      <configuration name="testMybatis.testFindAllUsers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="testMybatis_testFindTotalCountFromProduct - 2019.10.26 at 12h 49m 58s.xml">
-      <configuration name="testMybatis.testFindTotalCountFromProduct" configurationId="JUnit" />
+    <history-entry file="testMybatis_testFindAllUsers - 2019.11.06 at 23h 02m 20s.xml">
+      <configuration name="testMybatis.testFindAllUsers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="testMybatis_testCommon - 2019.10.26 at 13h 05m 52s.xml">
-      <configuration name="testMybatis.testCommon" configurationId="JUnit" />
+    <history-entry file="testMybatis_testFindAllUsers - 2019.11.06 at 23h 07m 09s.xml">
+      <configuration name="testMybatis.testFindAllUsers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="testMybatis_testCommon - 2019.10.26 at 13h 07m 14s.xml">
-      <configuration name="testMybatis.testCommon" configurationId="JUnit" />
+    <history-entry file="testMybatis_testFindAllUsers - 2019.11.06 at 23h 11m 53s.xml">
+      <configuration name="testMybatis.testFindAllUsers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="testMybatis_testCommon - 2019.10.26 at 13h 07m 34s.xml">
-      <configuration name="testMybatis.testCommon" configurationId="JUnit" />
+    <history-entry file="testMybatis_testFindAllRole - 2019.11.07 at 09h 15m 54s.xml">
+      <configuration name="testMybatis.testFindAllRole" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119799000" />
+    <option name="totallyTimeSpent" value="148992000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -585,29 +841,30 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Web" order="4" sideWeight="0.5013774" side_tool="true" weight="0.22460657" />
       <window_info id="Designer" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.4986226" visible="true" weight="0.2846924" />
+      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.4986226" visible="true" weight="0.2639485" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Spring" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="1" />
-      <window_info anchor="bottom" id="Docker" order="2" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.5007153" side_tool="true" weight="0.33614457" />
-      <window_info anchor="bottom" id="Messages" order="4" weight="0.32891566" />
-      <window_info anchor="bottom" id="Problems" order="5" />
-      <window_info anchor="bottom" id="Java Enterprise" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Application Servers" order="9" weight="0.18433735" />
-      <window_info anchor="bottom" id="Message" order="10" />
-      <window_info anchor="bottom" id="Find" order="11" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="12" weight="0.14457831" />
-      <window_info anchor="bottom" id="Debug" order="13" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="14" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="15" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="16" />
-      <window_info anchor="bottom" id="Database Console" order="17" weight="0.32891566" />
+      <window_info anchor="bottom" id="Thumbnails" order="0" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Run" order="1" visible="true" weight="0.19518073" />
+      <window_info anchor="bottom" id="Spring" order="2" />
+      <window_info anchor="bottom" id="Terminal" order="3" />
+      <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5007153" side_tool="true" weight="0.33614457" />
+      <window_info anchor="bottom" id="Messages" order="6" weight="0.32891566" />
+      <window_info anchor="bottom" id="Problems" order="7" />
+      <window_info anchor="bottom" id="Java Enterprise" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32891566" />
+      <window_info anchor="bottom" id="Application Servers" order="11" weight="0.18433735" />
+      <window_info anchor="bottom" id="Message" order="12" />
+      <window_info anchor="bottom" id="Find" order="13" weight="0.32891566" />
+      <window_info anchor="bottom" id="Debug" order="14" weight="0.6759036" />
+      <window_info anchor="bottom" id="Cvs" order="15" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="16" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="17" />
+      <window_info anchor="bottom" id="Database Console" order="18" weight="0.32891566" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Database" order="2" weight="0.3297568" />
+      <window_info anchor="right" id="Database" order="2" weight="0.12947068" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info anchor="right" id="Maven" order="5" weight="0.3297568" />
@@ -630,264 +887,87 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/744fe013-6a88-45e8-8681-1fd3ec3440e9/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_dao/src/main/resources/jdbc.properties">
+    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/order-detail.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="72" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="72" />
+        <state relative-caret-position="929">
+          <caret line="343" column="38" lean-forward="true" selection-start-line="343" selection-start-column="38" selection-end-line="343" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/header.jsp">
+    <entry file="file://$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/impl/ProductServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="254" column="43" selection-start-line="254" selection-start-column="43" selection-end-line="254" selection-end-column="43" />
+        <state relative-caret-position="465">
+          <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../../idea_maven/repository/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/annotations/Result.class">
+    <entry file="file://$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/ITravellerService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        <state relative-caret-position="478">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../../idea_maven/repository/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/annotations/One.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/744fe013-6a88-45e8-8681-1fd3ec3440e9/console_1.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_dao/src/main/resources/SqlMapConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="53" lean-forward="true" selection-start-line="7" selection-start-column="53" selection-end-line="8" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://744fe013-6a88-45e8-8681-1fd3ec3440e9/schema/ssm_product/table/member">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/744fe013-6a88-45e8-8681-1fd3ec3440e9/console_2.sql">
+    <entry file="file://$PROJECT_DIR$/ssm_domain/src/main/java/com/meiyukai/ssm/domain/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
-          <caret line="2" column="108" lean-forward="true" selection-start-line="2" selection-end-line="2" selection-end-column="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_dao/src/main/java/com/meiyukai/ssm/dao/IOrderTravellerDao.java" />
-    <entry file="file://$PROJECT_DIR$/ssm_domain/src/main/java/com/meiyukai/ssm/domain/OrderTravellers.java" />
-    <entry file="das://744fe013-6a88-45e8-8681-1fd3ec3440e9/schema/ssm_product/table/traveller">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://744fe013-6a88-45e8-8681-1fd3ec3440e9/schema/ssm_product/table/order_traveller">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://744fe013-6a88-45e8-8681-1fd3ec3440e9/schema/ssm_product/table/orders">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/impl/IOrderService.java" />
-    <entry file="file://$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/IMemberService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/impl/Order.java" />
-    <entry file="file://$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/impl/MemberServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#563#564#0" expanded="true" />
-            <element signature="e#613#614#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/impl/TravellerServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#274#275#0" expanded="true" />
-            <element signature="e#301#302#0" expanded="true" />
-            <element signature="e#368#369#0" expanded="true" />
-            <element signature="e#395#396#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/orders-list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="154" selection-start-line="153" selection-start-column="30" selection-end-line="153" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/all-admin-dataform.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="770" column="21" selection-start-line="770" selection-start-column="21" selection-end-line="770" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/all-tables-data.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="689" column="22" lean-forward="true" selection-start-line="689" selection-start-column="22" selection-end-line="689" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_domain/src/main/java/com/meiyukai/ssm/domain/Member.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/impl/OrderServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#815#816#0" expanded="true" />
-            <element signature="e#842#843#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/IOrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_dao/src/main/java/com/meiyukai/ssm/dao/ITravellerDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_dao/src/main/java/com/meiyukai/ssm/dao/IMemeberDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_domain/src/main/java/com/meiyukai/ssm/domain/Orders.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2161#2162#0" expanded="true" />
-            <element signature="e#2190#2191#0" expanded="true" />
-            <element signature="e#2234#2235#0" expanded="true" />
-            <element signature="e#2270#2271#0" expanded="true" />
-            <element signature="e#3228#3229#0" expanded="true" />
-            <element signature="e#3280#3281#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_dao/src/main/java/com/meiyukai/ssm/dao/IOrderDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="52" column="26" lean-forward="true" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/java/com/meiyukai/controller/orderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="34" column="45" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_domain/src/main/java/com/meiyukai/ssm/domain/Traveller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="9" column="64" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_dao/src/main/resources/applicationContext-dao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="48" column="29" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="244" column="20" lean-forward="true" selection-start-line="244" selection-start-column="20" selection-end-line="244" selection-end-column="20" />
+        <state relative-caret-position="100">
+          <caret line="249" column="26" lean-forward="true" selection-start-line="249" selection-start-column="26" selection-end-line="249" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_domain/src/main/java/com/meiyukai/ssm/domain/Product.java">
+    <entry file="file://$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/impl/MemberServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="357">
+          <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="das://744fe013-6a88-45e8-8681-1fd3ec3440e9/schema/ssm_product/table/product">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/ssm_dao/src/main/java/com/meiyukai/ssm/dao/IProductDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="47" column="10" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssm_dao/src/main/resources/applicationContext-dao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="48" column="29" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/header.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-58" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/product-list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="256" column="125" lean-forward="true" selection-start-line="256" selection-start-column="125" selection-end-line="256" selection-end-column="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/product-add.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="372" column="50" selection-start-line="372" selection-start-column="50" selection-end-line="372" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -898,120 +978,353 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_domain/src/main/java/com/meiyukai/ssm/domain/PageInfo.java">
+    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="853">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="658">
+          <caret line="56" column="19" lean-forward="true" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/ITravellerService.java">
+    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/resources/spring-security.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_dao/src/main/java/com/meiyukai/ssm/dao/IProductDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="47" column="10" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/IProductService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="37" column="10" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_dao/src/test/java/testMybatis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="134" column="14" selection-start-line="134" selection-start-column="14" selection-end-line="134" selection-end-column="14" />
+        <state relative-caret-position="168">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ssm_web/src/main/resources/springmvc.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="30" column="38" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="41" />
+        <state relative-caret-position="423">
+          <caret line="37" column="11" lean-forward="true" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/ssm_utils/src/main/java/com/meiyukai/ssm/BCryptPasswordEncoderUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="44" column="35" lean-forward="true" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
+        <state relative-caret-position="84">
+          <caret line="4" column="39" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/resources/applicationContext-web.xml">
+    <entry file="jar://$PROJECT_DIR$/../../idea_maven/repository/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/annotations/Results.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="252">
+          <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/footer.jsp">
+    <entry file="file://$PROJECT_DIR$/ssm_dao/src/main/java/com/meiyukai/ssm/dao/ITravellerDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="252">
+          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/asidebar.jsp">
+    <entry file="file://$PROJECT_DIR$/ssm_dao/src/main/java/com/meiyukai/ssm/dao/IOrderDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="105" lean-forward="true" selection-start-line="105" selection-end-line="105" />
+        <state relative-caret-position="759">
+          <caret line="52" column="26" lean-forward="true" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/product-list.jsp">
+    <entry file="jar://$PROJECT_DIR$/../../idea_maven/repository/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/annotations/Result.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5650">
-          <caret line="107" column="67" selection-start-line="107" selection-start-column="67" selection-end-line="107" selection-end-column="67" />
+        <state relative-caret-position="462">
+          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../idea_maven/repository/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/annotations/Select.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="159" column="19" lean-forward="true" selection-start-line="159" selection-start-column="19" selection-end-line="159" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/user-detail2.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="864" column="34" selection-start-line="864" selection-start-column="34" selection-end-line="864" selection-end-column="34" />
+          <folding>
+            <element signature="n#style#0;n#select#0;n#div#3;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#5;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#1;n#div#0;n#div#5;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#60719#60726#1#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/IUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssm_dao/src/main/java/com/meiyukai/ssm/dao/IUserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-66">
+          <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssm_domain/src/main/java/com/meiyukai/ssm/domain/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-54">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/impl/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="26" column="41" lean-forward="true" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#948#949#0" expanded="true" />
+            <element signature="e#999#1000#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/user-detail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1010">
+          <caret line="397" column="22" lean-forward="true" selection-start-line="397" selection-start-column="22" selection-end-line="397" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssm_dao/src/test/java/testMybatis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="169" column="63" lean-forward="true" selection-start-line="169" selection-start-column="63" selection-end-line="169" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/orders-list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="114" column="40" lean-forward="true" selection-start-line="114" selection-start-column="40" selection-end-line="114" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/java/com/meiyukai/controller/orderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="34" column="45" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/java/com/meiyukai/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="53" column="40" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ssm_web/src/main/java/com/meiyukai/controller/ProductController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+        <state relative-caret-position="184">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/impl/ProductServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/user-list.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
+        <state relative-caret-position="420">
+          <caret line="22" lean-forward="true" selection-end-line="377" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssm_domain/src/main/java/com/meiyukai/ssm/domain/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/product-add.jsp">
+    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/user-add.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8253">
-          <caret line="393" selection-start-line="393" selection-end-line="393" />
+        <state relative-caret-position="66">
+          <caret line="276" column="16" lean-forward="true" selection-start-line="276" selection-start-column="16" selection-end-line="276" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/order-detail.jsp">
+    <entry file="file://$PROJECT_DIR$/ssm_dao/src/main/java/com/meiyukai/ssm/dao/IRoleDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7203">
-          <caret line="343" column="38" selection-start-line="343" selection-start-column="38" selection-end-line="343" selection-end-column="38" />
+        <state relative-caret-position="423">
+          <caret line="44" column="36" lean-forward="true" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/IRoleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/impl/RoleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#680#681#0" expanded="true" />
+            <element signature="e#718#719#0" expanded="true" />
+            <element signature="e#777#778#0" expanded="true" />
+            <element signature="e#796#797#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/role-list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="103" column="41" lean-forward="true" selection-end-line="373" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/asidebar.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="78" column="50" lean-forward="true" selection-start-line="78" selection-start-column="50" selection-end-line="78" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/java/com/meiyukai/controller/RoleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/role-add.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="338" column="55" lean-forward="true" selection-end-line="394" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssm_dao/src/main/java/com/meiyukai/ssm/dao/IPermissionDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="39" column="47" lean-forward="true" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/IPermissionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssm_service/src/main/java/com/meiyukai/ssm/service/impl/PermissionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="32" column="51" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#786#787#0" expanded="true" />
+            <element signature="e#842#843#0" expanded="true" />
+            <element signature="e#913#914#0" expanded="true" />
+            <element signature="e#936#937#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/permission-add.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="344" column="109" selection-start-line="344" selection-start-column="109" selection-end-line="344" selection-end-column="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/webapp/pages/permission-list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19">
+          <caret line="267" column="108" selection-start-line="267" selection-start-column="108" selection-end-line="267" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssm_domain/src/main/java/com/meiyukai/ssm/domain/Permission.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#283#284#0" expanded="true" />
+            <element signature="e#311#312#0" expanded="true" />
+            <element signature="e#357#358#0" expanded="true" />
+            <element signature="e#391#392#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssm_web/src/main/java/com/meiyukai/controller/PermissionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="39" column="88" selection-start-line="39" selection-start-column="88" selection-end-line="39" selection-end-column="88" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
