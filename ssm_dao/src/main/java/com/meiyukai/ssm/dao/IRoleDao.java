@@ -1,5 +1,6 @@
 package com.meiyukai.ssm.dao;
 
+import com.meiyukai.ssm.domain.QueryVo;
 import com.meiyukai.ssm.domain.Role;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.mapping.FetchType;
@@ -27,7 +28,7 @@ public interface IRoleDao {
             @Result(property = "roleName" , column = "roleName"),
             @Result(property = "roleDesc" , column = "roleDesc"),
             @Result(property = "permissions" , column = "id" , many = @Many(select = "com.meiyukai.ssm.dao.IPermissionDao.findPermissionByRoleId" , fetchType = FetchType.LAZY)),
-            @Result(property = "users" , column = "id" , many = @Many(select = "com.meiyukai.ssm.dao.IUserDao.findUserByRoleId" , fetchType = FetchType.LAZY))
+            @Result(property = "userInfos" , column = "id" , many = @Many(select = "com.meiyukai.ssm.dao.IUserDao.findUserByRoleId" , fetchType = FetchType.LAZY))
     })
     @Select(value = "select * from role where id in(select  roleId from users_role where userId  = #{userId})")
     List<Role> findRoleByUserId(String userId);
@@ -43,5 +44,21 @@ public interface IRoleDao {
      */
     @Delete(value = "delete from role where id = #{roleId}")
      void deleteRole(String roleId);
+
+    /**
+     * 根据useId 查询 user 可用的Roles
+     */
+    @Select(value = "select * from role where id not in(select roleId from users_role where userId=#{userId})")
+    List<Role> findAvailableRolesForUser(String userId);
+
+
+    /**
+     * 根据 userId 和 roleId 为用户增加一个新的角色
+     * mybatis 有两种方式可以实现这种功能！
+     */
+    @Insert(value = "insert into users_role values(#{userId},#{roleId});")
+//    void userAddNewRoles(@Param(value="userId") String userId  , @Param(value = "roleId") String roleId);
+    void userAddNewRoles(QueryVo vo);
+
 
 }

@@ -27,8 +27,8 @@
 	<mvc:resources mapping="/pages/**" location="/pages/"/>
 	<mvc:resources mapping="/js/**" location="/js/"/>
 
-	<!--	释放静态资源-->
-	<!--<mvc:default-servlet-handler/>-->
+	<!--	释放静态资源 否则静态资源和 url 都会出问题-->
+	<mvc:default-servlet-handler/>
 
 	<!--格式化转换服务工厂-->
 	<bean  id="myConverter" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">

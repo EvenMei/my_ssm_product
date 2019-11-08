@@ -52,6 +52,7 @@ public interface IUserDao {
     /**
      * 根据 username 查询 user
      */
+    @ResultMap(value={"user_map"})
     @Select(value = "select * from users where username = #{username}")
     UserInfo findUserByUserName(String username);
 

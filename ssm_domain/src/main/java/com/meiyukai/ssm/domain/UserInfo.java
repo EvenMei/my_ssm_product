@@ -12,6 +12,7 @@ public class UserInfo implements Serializable {
     private Integer status;
 
     private String statusStr;
+    private Boolean statusBool;
     private List<Role> roles;
 
     public String getId() {
@@ -84,6 +85,20 @@ public class UserInfo implements Serializable {
         this.roles = roles;
     }
 
+    public Boolean getStatusBool() {
+        if(status==1){
+            statusBool = true;
+        }
+        if(status==0){
+            statusBool=false;
+        }
+        return statusBool;
+    }
+
+    public void setStatusBool(Boolean statusBool) {
+        this.statusBool = statusBool;
+    }
+
     @Override
     public String toString() {
         return "UserInfo{" +
@@ -94,7 +109,7 @@ public class UserInfo implements Serializable {
                 ", phoneNum='" + phoneNum + '\'' +
                 ", status=" + status +
                 ", statusStr='" + statusStr + '\'' +
-                ", roles=" + roles +
                 '}';
     }
+
 }

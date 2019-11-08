@@ -64,7 +64,7 @@
                     <ul class="treeview-menu">
 
                         <li id="user-manager">
-                            <a href="/user/findAll.do">
+                            <a href="/userInfo/findAll.do">
                                 <i class="fa fa-circle-o"></i> 用户管理
                             </a>
                         </li>

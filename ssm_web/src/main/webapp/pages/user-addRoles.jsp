@@ -1,29 +1,38 @@
 <%--
   Created by IntelliJ IDEA.
   User: meiyukai
-  Date: 2019-10-25
-  Time: 12:50
+  Date: 2019-11-08
+  Time: 15:43
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
     <!-- 页面meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>用户管理</title>
+
+
+
+    <title>数据 - AdminLTE2定制版</title>
     <meta name="description" content="AdminLTE2定制版">
     <meta name="keywords" content="AdminLTE2定制版">
 
+
+
+
     <!-- Tell the browser to be responsive to screen width -->
-    <meta content="width=device-width,initial-scale=1,maximum-scale=1,userInfo-scalable=no" name="viewport">
-    <!-- Bootstrap 3.3.6 -->
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
 
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+
+
 
 
     <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
@@ -48,7 +57,6 @@
     <link rel="stylesheet" href="../plugins/ionslider/ion.rangeSlider.skinNice.css">
     <link rel="stylesheet" href="../plugins/bootstrap-slider/slider.css">
     <link rel="stylesheet" href="../plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.css">
-
 
     <script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
     <script src="../plugins/jQueryUI/jquery-ui.min.js"></script>
@@ -95,38 +103,7 @@
     <script src="../plugins/bootstrap-slider/bootstrap-slider.js"></script>
     <script src="../plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script>
     <script src="../plugins/bootstrap-datetimepicker/locales/bootstrap-datetimepicker.zh-CN.js"></script>
-
     <script>
-
-        /*删除所选的订单*/
-        function deleteProduct(){
-
-            var selectList = new Array();
-            $("input[name='Ids']:checked").each(function (i,n) {
-                selectList.push(n.value);
-            });
-
-            // alert("selectList :  " + selectList);
-
-            $.ajax({
-                url:"/product/delete.do",
-                type:"POST",
-                contentType:"application/json;charset=utf-8",  /*Query的ajax提交数组使得springMVC使用必填参数*/
-                data:JSON.stringify(selectList),  //使用JSON.stringify(object) 转化为json 的格式。
-                // dataType:"json", //设置返回值类型
-                success:function (data) {
-                    alert(data);
-                    location.href="/userInfo/findAll.do";
-                }
-
-            });
-
-        }
-
-
-
-
-
         $(document).ready(function() {
             // 选择框
             $(".select2").select2();
@@ -137,6 +114,32 @@
             });
         });
 
+        function saveRoles() {
+            //先 获取 roleId
+            var selectList = new Array();
+            $("input[name='Ids']:checked").each(function (i,n) {
+                selectList.push(n.value);
+            });
+
+            //准备好参数
+            var json_data={
+                "userId" :$("#hidden_id").val(),
+                "selectList":selectList
+            };
+
+            $.ajax({
+                type:"post",
+                url:"/userInfo/addNewRoles.do",
+                contentType:"application/json;charset=utf-8",
+                data: JSON.stringify(json_data),
+                // data: {"params": "hello"},
+                success:function (data) {
+                    alert("message :  "  + data);
+                    window.location.href="/userInfo/findById.do?id="+$("#hidden_id").val();
+                }
+            });
+
+        }
 
         // 设置激活菜单
         function setSidebarActive(tagUri) {
@@ -151,7 +154,7 @@
         $(document).ready(function() {
 
             // 激活导航位置
-            setSidebarActive("userInfo-manager");
+            setSidebarActive("admin-datalist");
 
             // 列表按钮
             $("#dataList td input[type='checkbox']").iCheck({
@@ -169,33 +172,26 @@
                 $(this).data("clicks", !clicks);
             });
         });
-
     </script>
 </head>
+
 <body class="hold-transition skin-purple sidebar-mini">
 
-<div class="wrapper" >
+<div class="wrapper">
 
+    <!-- 页面头部 -->
+   <jsp:include page="./header.jsp"/>
+    <!-- 页面头部 /-->
 
-
-
-    <%--引入头部导航栏--%>
-    <jsp:include page="./header.jsp"/>
-    <%--引入头部导航栏--%>
-
-    <%--引入侧边导航栏--%>
+    <!-- 导航侧栏 -->
     <jsp:include page="./asidebar.jsp"/>
-    <%--引入侧边导航栏--%>
-
-
-
+    <!-- 导航侧栏 /-->
 
     <!-- 内容区域 -->
     <!-- @@master = admin-layout.html-->
     <!-- @@block = content -->
 
     <div class="content-wrapper">
-
 
         <!-- 内容头部 -->
         <section class="content-header">
@@ -205,8 +201,8 @@
             </h1>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
-                <li><a href="#">基础数据</a></li>
-                <li class="active">订单管理</li>
+                <li><a href="#">数据管理</a></li>
+                <li class="active">数据列表</li>
             </ol>
         </section>
         <!-- 内容头部 /-->
@@ -216,9 +212,9 @@
 
             <!-- .box-body -->
             <div class="box box-primary">
-
                 <div class="box-header with-border">
-                    <h3 class="box-title">列表</h3>
+                    <h3 class="box-title">可选角色列表</h3>
+                    <input type="hidden" value="${userInfo.id}" id="hidden_id">
                 </div>
 
                 <div class="box-body">
@@ -226,24 +222,7 @@
                     <!-- 数据表格 -->
                     <div class="table-box">
 
-                        <!--工具栏-->
-                        <div class="pull-left">
-                            <div class="form-group form-inline">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-default" title="新建" onclick="location.href='../pages/userInfo-add.jsp'"><i class="fa fa-file-o"></i> 新建</button>
-                                    <button type="button" class="btn btn-default" title="删除" onclick="deleteProduct()"><i class="fa fa-trash-o"></i> 删除</button>
-                                    <button type="button" class="btn btn-default" title="开启"><i class="fa fa-check"></i> 开启</button>
-                                    <button type="button" class="btn btn-default" title="刷新"><i class="fa fa-refresh"></i> 刷新</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box-tools pull-right">
-                            <div class="has-feedback">
-                                <input type="text" class="form-control input-sm" placeholder="搜索">
-                                <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                            </div>
-                        </div>
-                        <!--工具栏/-->
+
 
                         <!--数据列表-->
                         <table id="dataList" class="table table-bordered table-striped table-hover dataTable">
@@ -252,101 +231,49 @@
                                 <th class="" style="padding-right:0px;">
                                     <input id="selall" type="checkbox" class="icheckbox_square-blue">
                                 </th>
-                                <th class="sorting_asc">ID</th>
-                                <th class="sorting_asc sorting_asc_disabled">用户名 </th>
-                                <th class="sorting_desc">邮箱</th>
-                                <th class="sorting_desc sorting_desc_disabled">联系电话</th>
-                                <th class="sorting">状态</th>
-                                <th class="text-center">操作</th>
+                                <th class="sorting">ID</th>
+                                <th class="sorting">名称</th>
+                                <th class="sorting">描述</th>
                             </tr>
                             </thead>
                             <tbody>
 
-
-
-                            <c:forEach items="${userInfos}" var="userInfo" varStatus="s">
-
+                            <c:forEach items="${availableRoles}" var="role" varStatus="s">
                                 <tr>
-                                    <td><input   name="Ids"  id="${s.index}" type="checkbox" value="${userInfo.id}" ></td>
-                                    <td>${userInfo.id}</td>
-                                    <td>${userInfo.username}</td>
-                                    <td>${userInfo.email}</td>
-                                    <td>${userInfo.phoneNum}</td>
-                                    <td>${userInfo.statusStr}</td>
-                                    <td></td>
-
-
-                                    <td class="text-center">
-                                        <button type="button" class="btn bg-olive btn-xs">订单</button>
-                                        <button type="button" class="btn bg-olive btn-xs" onclick='location.href="/userInfo/findById.do?id=${userInfo.id}"'>详情</button>
-                                        <button type="button" class="btn bg-olive btn-xs">编辑</button>
-                                    </td>
-
-
+                                    <td><input name="Ids" type="checkbox"  value="${role.id}" id="${s.index}"></td>
+                                    <td>${role.id}</td>
+                                    <td>${role.roleName}</td>
+                                    <td>${role.roleDesc}</td>
                                 </tr>
-
                             </c:forEach>
 
 
 
-
                             </tbody>
-                            <!--
-                        <tfoot>
-                        <tr>
-                        <th>Rendering engine</th>
-                        <th>Browser</th>
-                        <th>Platform(s)</th>
-                        <th>Engine version</th>
-                        <th>CSS grade</th>
-                        </tr>
-                        </tfoot>-->
+
                         </table>
                         <!--数据列表/-->
+
 
 
                     </div>
                     <!-- 数据表格 /-->
 
 
+                    <div class="row">
+
+                        <div class="col-md-2 data"></div>
+                        <div class="col-md-10 data text-center">
+                            <button type="button" class="btn bg-maroon"  onclick="saveRoles()">保存</button>
+                            <button type="button" class="btn bg-default" onclick="history.back(-1);">返回</button>
+                        </div>
+
+                    </div>
+
                 </div>
                 <!-- /.box-body -->
 
-                <!-- .box-footer-->
-                <div class="box-footer">
-                    <div class="pull-left">
-                        <div class="form-group form-inline">
-                            总共2 页，共14 条数据。 每页
-                            <select class="form-control">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select> 条
-                        </div>
-                    </div>
 
-                    <div class="box-tools pull-right">
-                        <ul class="pagination">
-                            <li>
-                                <a href="#" aria-label="Previous">首页</a>
-                            </li>
-                            <li><a href="#">上一页</a></li>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li><a href="#">下一页</a></li>
-                            <li>
-                                <a href="#" aria-label="Next">尾页</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-                <!-- /.box-footer-->
 
 
 
@@ -359,17 +286,11 @@
     <!-- @@close -->
     <!-- 内容区域 /-->
 
-    <%--引入底部导航--%>
+    <!-- 底部导航 -->
     <jsp:include page="./footer.jsp"/>
-    <%--引入底部导航--%>
-
-
-
-
+    <!-- 底部导航 /-->
 
 </div>
-
-
 
 
 

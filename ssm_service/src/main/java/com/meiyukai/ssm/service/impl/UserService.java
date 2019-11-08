@@ -1,6 +1,7 @@
 package com.meiyukai.ssm.service.impl;
 
 import com.meiyukai.ssm.dao.IUserDao;
+import com.meiyukai.ssm.domain.Role;
 import com.meiyukai.ssm.domain.UserInfo;
 import com.meiyukai.ssm.service.IUserService;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -19,8 +20,11 @@ public class UserService implements IUserService {
     @Resource(name = "userDao")
     private IUserDao userDao;
 
+    @Resource(name = "roleService")
+    private RoleService roleService;
+
     //加密工具类
-//    @Resource(name = "passwordEncoder")
+    @Resource(name = "passwordEncoder")
     private BCryptPasswordEncoder passwordEncoder;
 
     @Override
@@ -31,8 +35,8 @@ public class UserService implements IUserService {
     @Override
     public void saveUserInfo(UserInfo userInfo) {
         //对密码进行加密 (或者使用 自定义的加密工具实现 )
-//        userInfo.setPassword(passwordEncoder.encode(userInfo.getPassword()));
-
+        userInfo.setPassword(passwordEncoder.encode(userInfo.getPassword()));
+//        System.out.println("即将保存 userInfo ：  " + userInfo);
         userDao.saveUserInfo(userInfo);
     }
 
@@ -51,18 +55,24 @@ public class UserService implements IUserService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         UserInfo userInfo = userDao.findUserByUserName(username );
-        System.out.println("userinfo :  "   +   userInfo );
-        User user  = new User(userInfo.getUsername(), "{noop}"+userInfo.getPassword(),getAuthority());
+      //  System.out.println("userinfo :  "   +   userInfo );
+      //  System.out.println("statusBool :   " + userInfo.getStatusBool());
+        //User user  = new User(userInfo.getUsername(), "{noop}"+userInfo.getPassword(),getAuthority(userInfo.getRoles()));
+        User user  = new User(userInfo.getUsername() , userInfo.getPassword(),
+                userInfo.getStatusBool(),true,true,true ,
+                getAuthority(userInfo.getRoles()));
 
         return user;
     }
 
 
     //返回一个list 集合 ， 集合中装入角色描述
-    public List<SimpleGrantedAuthority> getAuthority(){
+    public List<SimpleGrantedAuthority> getAuthority(List<Role> roles){
         List<SimpleGrantedAuthority> list = new ArrayList<>();
-        list.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
-        list.add(new SimpleGrantedAuthority("ROLE_USER"));
+        for(Role role:roles){
+            //System.out.println("roleInfo : "  + role.getRoleName());
+            list.add(new SimpleGrantedAuthority("ROLE_"+role.getRoleName()));
+        }
         return list;
     }
 }

@@ -263,7 +263,7 @@
                                     <a href="#" class="btn btn-default btn-flat">修改密码</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="../pages/login.jsp" class="btn btn-default btn-flat">注销</a>
+                                    <a href="/logout.do" class="btn btn-default btn-flat">注销</a>
                                 </div>
                             </li>
                         </ul>

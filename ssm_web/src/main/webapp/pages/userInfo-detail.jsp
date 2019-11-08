@@ -254,7 +254,7 @@
         $(document).ready(function() {
 
             // 激活导航位置
-            setSidebarActive("admin-dataform");
+            setSidebarActive("user-manager");
 
         });
     </script>
@@ -341,6 +341,14 @@
                                             <td>${permission.permissionName}</td>
                                             <td>${permission.url}</td>
                                         </tr>
+
+                                        <%--test delete later--%>
+                                        <%--<c:forEach begin="1" end="2" step="1" varStatus="s3" >
+                                            <tr data-tt-id="${s.index+1}-${s2.index+1}-${s3.index+1}" data-tt-parent-id="${s.index+1}-${s2.index+1}">
+                                                <td>a</td>
+                                                <td>b</td>
+                                            </tr>
+                                        </c:forEach>--%>
 
                                     </c:forEach>
 

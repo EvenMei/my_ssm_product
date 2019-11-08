@@ -1,6 +1,7 @@
 package com.meiyukai.ssm.service.impl;
 
 import com.meiyukai.ssm.dao.IRoleDao;
+import com.meiyukai.ssm.domain.QueryVo;
 import com.meiyukai.ssm.domain.Role;
 import com.meiyukai.ssm.service.IRoleService;
 import org.springframework.stereotype.Service;
@@ -33,6 +34,16 @@ public class RoleService implements IRoleService {
     @Override
     public void deleteRole(String roleId) {
         roleDao.deleteRole(roleId);
+    }
+
+    @Override
+    public List<Role> findAvailableRolesForUser(String userId) {
+        return roleDao.findAvailableRolesForUser(userId);
+    }
+
+    @Override
+    public void userAddNewRoles(QueryVo vo) {
+        roleDao.userAddNewRoles(vo);
     }
 
 

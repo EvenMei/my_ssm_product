@@ -228,5 +228,26 @@ public class testMybatis {
         System.out.println("userInfo  : " + userInfo);
      }
 
+     @Test
+     public void testFindAvailableRoles(){
+        List<Role> roles = roleDao.findAvailableRolesForUser("67a14e4557974dd699409591e3e7cb8c");
+        for(Role role: roles){
+            System.out.println("role :  "  + role);
+        }
+     }
+
+     @Test
+     public void testUserAddNewRoles(){
+        QueryVo vo = new QueryVo();
+        vo.setUserId("7c2e94c20f96477e9864053107649754");
+        vo.setRoleId("r02");
+        roleDao.userAddNewRoles(vo);
+
+     }
+
+
+
+
+
 
 }
