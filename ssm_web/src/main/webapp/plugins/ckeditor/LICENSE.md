@@ -81,7 +81,7 @@ Preamble
   The licenses for most software are designed to take away your
 freedom to share and change it.  By contrast, the GNU General Public
 License is intended to guarantee your freedom to share and change free
-software-to make sure the software is free for all its users.  This
+software-to make sure the software is free for all its userInfos.  This
 General Public License applies to most of the Free Software
 Foundation's software and to any other program whose authors commit to
 using it.  (Some other Free Software Foundation software is covered by
@@ -175,8 +175,8 @@ above, provided that you also meet all of these conditions:
     interactive use in the most ordinary way, to print or display an
     announcement including an appropriate copyright notice and a
     notice that there is no warranty (or else, saying that you provide
-    a warranty) and that users may redistribute the program under
-    these conditions, and telling the user how to view a copy of this
+    a warranty) and that userInfos may redistribute the program under
+    these conditions, and telling the userInfo how to view a copy of this
     License.  (Exception: if the Program itself is interactive but
     does not normally print such an announcement, your work based on
     the Program is not required to print an announcement.)
@@ -371,7 +371,7 @@ Preamble
   The licenses for most software are designed to take away your
 freedom to share and change it.  By contrast, the GNU General Public
 Licenses are intended to guarantee your freedom to share and change
-free software-to make sure the software is free for all its users.
+free software-to make sure the software is free for all its userInfos.
 
   This license, the Lesser General Public License, applies to some
 specially designated software packages-typically libraries-of the
@@ -414,7 +414,7 @@ introduced by others.
 
   Finally, software patents pose a constant threat to the existence of
 any free program.  We wish to make sure that a company cannot
-effectively restrict the users of a free program by obtaining a
+effectively restrict the userInfos of a free program by obtaining a
 restrictive license from a patent holder.  Therefore, we insist that
 any patent license obtained for a version of the library must be
 consistent with the full freedom of use specified in this license.
@@ -435,7 +435,7 @@ Public License permits more lax criteria for linking other code with
 the library.
 
   We call this license the "Lesser" General Public License because it
-does Less to protect the user's freedom than the ordinary General
+does Less to protect the userInfo's freedom than the ordinary General
 Public License.  It also provides other free software developers Less
 of an advantage over competing non-free programs.  These disadvantages
 are the reason we use the ordinary General Public License for many
@@ -458,7 +458,7 @@ operating system, as well as its variant, the GNU/Linux operating
 system.
 
   Although the Lesser General Public License is Less protective of the
-users' freedom, it does ensure that the user of a program that is
+userInfos' freedom, it does ensure that the userInfo of a program that is
 linked with the Library has the freedom and the wherewithal to run
 that program using a modified version of the Library.
 
@@ -636,7 +636,7 @@ Library is used in it and that the Library and its use are covered by
 this License.  You must supply a copy of this License.  If the work
 during execution displays copyright notices, you must include the
 copyright notice for the Library among them, as well as a reference
-directing the user to the copy of this License.  Also, you must do one
+directing the userInfo to the copy of this License.  Also, you must do one
 of these things:
 
     a) Accompany the work with the complete corresponding
@@ -645,22 +645,22 @@ of these things:
     Sections 1 and 2 above); and, if the work is an executable linked
     with the Library, with the complete machine-readable "work that
     uses the Library", as object code and/or source code, so that the
-    user can modify the Library and then relink to produce a modified
+    userInfo can modify the Library and then relink to produce a modified
     executable containing the modified Library.  (It is understood
-    that the user who changes the contents of definitions files in the
+    that the userInfo who changes the contents of definitions files in the
     Library will not necessarily be able to recompile the application
     to use the modified definitions.)
 
     b) Use a suitable shared library mechanism for linking with the
     Library.  A suitable mechanism is one that (1) uses at run time a
-    copy of the library already present on the user's computer system,
+    copy of the library already present on the userInfo's computer system,
     rather than copying library functions into the executable, and (2)
     will operate properly with a modified version of the library, if
-    the user installs one, as long as the modified version is
+    the userInfo installs one, as long as the modified version is
     interface-compatible with the version that the work was made with.
 
     c) Accompany the work with a written offer, valid for at
-    least three years, to give the same user the materials
+    least three years, to give the same userInfo the materials
     specified in Subsection 6a, above, for a charge no more
     than the cost of performing this distribution.
 
@@ -668,8 +668,8 @@ of these things:
     from a designated place, offer equivalent access to copy the above
     specified materials from the same place.
 
-    e) Verify that the user has already received a copy of these
-    materials or that you have already sent this user a copy.
+    e) Verify that the userInfo has already received a copy of these
+    materials or that you have already sent this userInfo a copy.
 
   For an executable, the required form of the "work that uses the
 Library" must include any data and utility programs needed for
@@ -1029,7 +1029,7 @@ Version 1.1
      You must duplicate the notice in Exhibit A in each file of the Source
      Code.  If it is not possible to put such notice in a particular Source
      Code file due to its structure, then You must include such notice in a
-     location (such as a relevant directory) where a user would be likely
+     location (such as a relevant directory) where a userInfo would be likely
      to look for such a notice.  If You created one or more Modification(s)
      You may add your name as a Contributor to the notice described in
      Exhibit A.  You must also duplicate this License in any documentation
@@ -1181,7 +1181,7 @@ Version 1.1
      license.
 
      8.4.  In the event of termination under Sections 8.1 or 8.2 above,
-     all end user license agreements (excluding distributors and resellers)
+     all end userInfo license agreements (excluding distributors and resellers)
      which have been validly granted by You or any distributor hereunder
      prior to termination shall survive termination.
 
@@ -1368,12 +1368,12 @@ redistributed and/or sold with any software, provided that each copy
 contains the above copyright notice and this license. These can be
 included either as stand-alone text files, human-readable headers or
 in the appropriate machine-readable metadata fields within text or
-binary files as long as those fields can be easily viewed by the user.
+binary files as long as those fields can be easily viewed by the userInfo.
 
 3) No Modified Version of the Font Software may use the Reserved Font
 Name(s) unless explicit written permission is granted by the corresponding
 Copyright Holder. This restriction only applies to the primary font name as
-presented to the users.
+presented to the userInfos.
 
 4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font
 Software shall not be used to promote, endorse or advertise any

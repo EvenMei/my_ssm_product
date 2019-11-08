@@ -18,7 +18,7 @@
     <meta name="keywords" content="AdminLTE2定制版">
 
     <!-- Tell the browser to be responsive to screen width -->
-    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,userInfo-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.6 -->
 
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -116,7 +116,7 @@
                 // dataType:"json", //设置返回值类型
                 success:function (data) {
                     alert(data);
-                    location.href="/user/findAll.do";
+                    location.href="/userInfo/findAll.do";
                 }
 
             });
@@ -151,7 +151,7 @@
         $(document).ready(function() {
 
             // 激活导航位置
-            setSidebarActive("user-manager");
+            setSidebarActive("userInfo-manager");
 
             // 列表按钮
             $("#dataList td input[type='checkbox']").iCheck({
@@ -230,7 +230,7 @@
                         <div class="pull-left">
                             <div class="form-group form-inline">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-default" title="新建" onclick="location.href='../pages/user-add.jsp'"><i class="fa fa-file-o"></i> 新建</button>
+                                    <button type="button" class="btn btn-default" title="新建" onclick="location.href='../pages/userInfo-add.jsp'"><i class="fa fa-file-o"></i> 新建</button>
                                     <button type="button" class="btn btn-default" title="删除" onclick="deleteProduct()"><i class="fa fa-trash-o"></i> 删除</button>
                                     <button type="button" class="btn btn-default" title="开启"><i class="fa fa-check"></i> 开启</button>
                                     <button type="button" class="btn btn-default" title="刷新"><i class="fa fa-refresh"></i> 刷新</button>
@@ -264,21 +264,21 @@
 
 
 
-                            <c:forEach items="${users}" var="user" varStatus="s">
+                            <c:forEach items="${userInfos}" var="userInfo" varStatus="s">
 
                                 <tr>
-                                    <td><input   name="Ids"  id="${s.index}" type="checkbox" value="${user.id}" ></td>
-                                    <td>${user.id}</td>
-                                    <td>${user.username}</td>
-                                    <td>${user.email}</td>
-                                    <td>${user.phoneNum}</td>
-                                    <td>${user.statusStr}</td>
+                                    <td><input   name="Ids"  id="${s.index}" type="checkbox" value="${userInfo.id}" ></td>
+                                    <td>${userInfo.id}</td>
+                                    <td>${userInfo.username}</td>
+                                    <td>${userInfo.email}</td>
+                                    <td>${userInfo.phoneNum}</td>
+                                    <td>${userInfo.statusStr}</td>
                                     <td></td>
 
 
                                     <td class="text-center">
                                         <button type="button" class="btn bg-olive btn-xs">订单</button>
-                                        <button type="button" class="btn bg-olive btn-xs" onclick='location.href="/user/findById.do?id=${user.id}"'>详情</button>
+                                        <button type="button" class="btn bg-olive btn-xs" onclick='location.href="/userInfo/findById.do?id=${userInfo.id}"'>详情</button>
                                         <button type="button" class="btn bg-olive btn-xs">编辑</button>
                                     </td>
 

@@ -1,27 +1,30 @@
 <%--
   Created by IntelliJ IDEA.
   User: meiyukai
-  Date: 2019-10-22
-  Time: 12:21
+  Date: 2019-11-07
+  Time: 19:05
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-
-
     <!-- 页面meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>旅游管理系统</title>
+
+
+
+    <title>数据 - AdminLTE2定制版</title>
     <meta name="description" content="AdminLTE2定制版">
     <meta name="keywords" content="AdminLTE2定制版">
 
+
+
+
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width,initial-scale=1,maximum-scale=1,userInfo-scalable=no" name="viewport">
-    <!-- Bootstrap 3.3.6 -->
 
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -50,8 +53,6 @@
     <link rel="stylesheet" href="../plugins/ionslider/ion.rangeSlider.skinNice.css">
     <link rel="stylesheet" href="../plugins/bootstrap-slider/slider.css">
     <link rel="stylesheet" href="../plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.css">
-
-
     <script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
     <script src="../plugins/jQueryUI/jquery-ui.min.js"></script>
     <script>
@@ -120,69 +121,76 @@
 
 
         $(document).ready(function() {
-
-            // 激活导航位置
-            setSidebarActive("admin-datalist");
-
-            // 列表按钮
-            $("#dataList td input[type='checkbox']").iCheck({
-                checkboxClass: 'icheckbox_square-blue',
-                increaseArea: '20%'
-            });
-            // 全选操作
-            $("#selall").click(function() {
-                var clicks = $(this).is(':checked');
-                if (!clicks) {
-                    $("#dataList td input[type='checkbox']").iCheck("uncheck");
-                } else {
-                    $("#dataList td input[type='checkbox']").iCheck("check");
-                }
-                $(this).data("clicks", !clicks);
-            });
+            setSidebarActive("admin-404");
         });
     </script>
 
-
 </head>
-
 
 <body class="hold-transition skin-purple sidebar-mini">
 
 <div class="wrapper">
 
+    <!-- 页面头部 -->
+    <jsp:include page="./header.jsp"/>
+    <!-- 页面头部 /-->
 
-<%--引入头部导航栏--%>
-        <jsp:include page="./header.jsp"/>
-    <%--引入头部导航栏--%>
-
-    <%--引入侧边导航栏--%>
-        <jsp:include page="./asidebar.jsp"/>
-    <%--引入侧边导航栏--%>
-
-
-
+    <!-- 导航侧栏 -->
+    <jsp:include page="./asidebar.jsp"/>
+    <!-- 导航侧栏 /-->
 
     <!-- 内容区域 -->
-    <!-- @@master = admin-layout.html-->
-    <!-- @@block = content -->
-
     <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                404 错误页面
+            </h1>
 
+            <ol class="breadcrumb">
+                <li><a href="all-admin-index.html"><i class="fa fa-dashboard"></i> 首页</a></li>
+                <li class="active">404 错误</li>
+            </ol>
 
-        <img src="../img/photo4.jpg" width="100%" >
+        </section>
 
+        <!-- Main content -->
+        <section class="content">
+            <div class="error-page">
+                <h2 class="headline text-yellow"> 404</h2>
+
+                <div class="error-content">
+                    <h3><i class="fa fa-warning text-yellow"></i> Oops! 页面没有找到.</h3>
+
+                    <p>
+                        没有找到你请求的页面, 你可以 <a href="all-admin-index.html">返回到后台首页</a> 或者通过搜索查询
+                    </p>
+
+                    <form class="search-form">
+                        <div class="input-group">
+                            <input type="text" name="search" class="form-control" placeholder="搜索">
+
+                            <div class="input-group-btn">
+                                <button type="submit" name="submit" class="btn btn-warning btn-flat"><i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- /.input-group -->
+                    </form>
+                </div>
+                <!-- /.error-content -->
+            </div>
+            <!-- /.error-page -->
+        </section>
+        <!-- /.content -->
     </div>
-    <!-- @@close -->
     <!-- 内容区域 /-->
 
-        <%--引入底部导航--%>
-        <jsp:include page="./footer.jsp"/>
-        <%--引入底部导航--%>
-
+    <!-- 底部导航 -->
+    <jsp:include page="./footer.jsp"/>
+    <!-- 底部导航 /-->
 
 </div>
-
-
 
 
 

@@ -22,7 +22,7 @@
 
 
     <!-- Tell the browser to be responsive to screen width -->
-    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,userInfo-scalable=no" name="viewport">
 
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -324,11 +324,11 @@
 
 
                                 <tr data-tt-id="0">
-                                    <td>${user.username}</td>
+                                    <td>${userInfo.username}</td>
                                 </tr>
 
                                 <tbody>
-                                <c:forEach items="${user.roles}" var="role" varStatus="s">
+                                <c:forEach items="${userInfo.roles}" var="role" varStatus="s">
 
                                     <tr data-tt-id="${s.index+1}" data-tt-parent-id="0">
                                         <td>${role.roleName}</td>

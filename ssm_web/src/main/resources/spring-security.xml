@@ -8,20 +8,20 @@
     http://www.springframework.org/schema/security/spring-security.xsd">
 
 
-    <!--<security:http auto-config="true" use-expressions="false">
-        &lt;!&ndash; intercept-url定义一个过滤规则 pattern表示对哪些url进行权限控制，access属性表示在请求对应
+    <security:http auto-config="true" use-expressions="false">
+        <!-- intercept-url定义一个过滤规则 pattern表示对哪些url进行权限控制，access属性表示在请求对应
         的URL时需要什么权限，
         默认配置时它应该是一个以逗号分隔的角色列表，请求的用户只需拥有其中的一个角色就能成功访问对应
-        的URL &ndash;&gt;
+        的URL -->
         <security:intercept-url pattern="/**" access="ROLE_USER" />
-        &lt;!&ndash; auto-config配置后，不需要在配置下面信息 <security:form-login /> 定义登录表单信息
-        <security:http-basic/> <security:logout /> &ndash;&gt;
+        <!-- auto-config配置后，不需要在配置下面信息 <security:form-login /> 定义登录表单信息
+        <security:http-basic/> <security:logout /> -->
     </security:http>
 
     <security:authentication-manager>
         <security:authentication-provider>
             <security:user-service>
-                <security:user name="user" password="{noop}user"
+                <security:user name="userInfo" password="{noop}userInfo"
                                authorities="ROLE_USER" />
                 <security:user name="admin" password="{noop}admin"
                                authorities="ROLE_ADMIN" />
@@ -29,7 +29,6 @@
         </security:authentication-provider>
     </security:authentication-manager>
 
--->
 
     <!--配置加密类-->
     <bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>

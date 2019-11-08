@@ -151,15 +151,15 @@ public class testMybatis {
 
     @Test
     public void testFindAllUsers(){
-        List<User> users = userDao.findAll();
-        for(User user :users){
-            System.out.println("------id------"  + user.getId());
-            System.out.println("------username------"+  user.getUsername()) ;
-            System.out.println("--------password--------" +user.getPassword() );
-            System.out.println("-------email----- "  + user.getEmail() );
-            System.out.println("------phoneNum-------"+ user.getPhoneNum());
-            System.out.println("-----------statusStr-----------"+user.getStatusStr());
-            System.out.println("------------roles----------------- " +  user.getRoles());
+        List<UserInfo> userInfos = userDao.findAll();
+        for(UserInfo userInfo : userInfos){
+            System.out.println("------id------"  + userInfo.getId());
+            System.out.println("------username------"+  userInfo.getUsername()) ;
+            System.out.println("--------password--------" + userInfo.getPassword() );
+            System.out.println("-------email----- "  + userInfo.getEmail() );
+            System.out.println("------phoneNum-------"+ userInfo.getPhoneNum());
+            System.out.println("-----------statusStr-----------"+ userInfo.getStatusStr());
+            System.out.println("------------roles----------------- " +  userInfo.getRoles());
             System.out.println("========================================================");
         }
     }
@@ -183,8 +183,8 @@ public class testMybatis {
 
     @Test
     public void testFindUserById(){
-        User user  = userDao.findUserById("9790d98297994651968b0b621f6186dd");
-        System.out.println("Userinfo :  " +  user  );
+        UserInfo userInfo = userDao.findUserById("9790d98297994651968b0b621f6186dd");
+        System.out.println("Userinfo :  " + userInfo);
     }
 
     @Test
@@ -216,10 +216,16 @@ public class testMybatis {
 
      @Test
      public void testFindUserByRoleId(){
-        List<User>   users = userDao.findUserByRoleId("r01");
-        for(User user : users ){
-            System.out.println("user    : "  +  user);
+        List<UserInfo> userInfos = userDao.findUserByRoleId("r01");
+        for(UserInfo userInfo : userInfos){
+            System.out.println("userInfo    : "  + userInfo);
         }
+     }
+
+     @Test
+     public void testFindUserByUserName(){
+        UserInfo userInfo =  userDao.findUserByUserName("meiyukai");
+        System.out.println("userInfo  : " + userInfo);
      }
 
 

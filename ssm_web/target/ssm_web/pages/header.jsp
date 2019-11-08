@@ -256,27 +256,14 @@
                                     <small>最后登录 11:20AM</small>
                                 </p>
                             </li>
-                            <!-- Menu Body
-                    <li class="user-body">
-                        <div class="row">
-                            <div class="col-xs-4 text-center">
-                                <a href="#">Followers</a>
-                            </div>
-                            <div class="col-xs-4 text-center">
-                                <a href="#">Sales</a>
-                            </div>
-                            <div class="col-xs-4 text-center">
-                                <a href="#">Friends</a>
-                            </div>
-                        </div>
-                    </li>-->
+
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-left">
                                     <a href="#" class="btn btn-default btn-flat">修改密码</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="#" class="btn btn-default btn-flat">注销</a>
+                                    <a href="../pages/login.jsp" class="btn btn-default btn-flat">注销</a>
                                 </div>
                             </li>
                         </ul>

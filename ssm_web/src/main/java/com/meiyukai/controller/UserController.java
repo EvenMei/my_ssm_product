@@ -1,6 +1,6 @@
 package com.meiyukai.controller;
 
-import com.meiyukai.ssm.domain.User;
+import com.meiyukai.ssm.domain.UserInfo;
 import com.meiyukai.ssm.service.impl.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,8 +25,8 @@ public class UserController {
      */
     @RequestMapping(value = "/findAll.do")
     public String  findAll(Model model){
-        List<User> users =  userService.findAll();
-        model.addAttribute("users"  ,  users);
+        List<UserInfo> userInfos =  userService.findAll();
+        model.addAttribute("users"  , userInfos);
         return "user-list";
     }
 
@@ -35,10 +35,10 @@ public class UserController {
      *  保存用户信息
      */
     @RequestMapping(value = "/save.do")
-    public String saveUserInfo( User user){
-        System.out.println("userInfo :  " +  user);
-        user.setId(UUID.randomUUID().toString().replace("-",""));
-        userService.saveUserInfo(user);
+    public String saveUserInfo( UserInfo userInfo){
+        System.out.println("userInfo :  " + userInfo);
+        userInfo.setId(UUID.randomUUID().toString().replace("-",""));
+        userService.saveUserInfo(userInfo);
         return "forward:findAll.do";
     }
 
@@ -49,9 +49,9 @@ public class UserController {
      */
     @RequestMapping(value = "/findById.do")
     public String findById(String id , Model model){
-        User user = userService.findUserById(id);
-        System.out.println("userinfo :    " + user);
-        model.addAttribute("user" , user);
+        UserInfo userInfo = userService.findUserById(id);
+        System.out.println("userinfo :    " + userInfo);
+        model.addAttribute("user" , userInfo);
         return "user-detail";
 
     }

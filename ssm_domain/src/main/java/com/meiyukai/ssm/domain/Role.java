@@ -9,7 +9,7 @@ public class Role implements Serializable {
     private String roleDesc;
 
     private List<Permission> permissions;
-    private List<User> users;
+    private List<UserInfo> userInfos;
 
 
     public String getId() {
@@ -44,12 +44,12 @@ public class Role implements Serializable {
         this.permissions = permissions;
     }
 
-    public List<User> getUsers() {
-        return users;
+    public List<UserInfo> getUserInfos() {
+        return userInfos;
     }
 
-    public void setUsers(List<User> users) {
-        this.users = users;
+    public void setUserInfos(List<UserInfo> userInfos) {
+        this.userInfos = userInfos;
     }
 
     @Override

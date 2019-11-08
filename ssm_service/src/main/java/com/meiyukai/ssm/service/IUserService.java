@@ -1,33 +1,34 @@
 package com.meiyukai.ssm.service;
 
-import com.meiyukai.ssm.domain.User;
+import com.meiyukai.ssm.domain.UserInfo;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
 import java.util.List;
 
-public interface IUserService {
+public interface IUserService extends UserDetailsService {
     /**
-     * 查询所有的 User
+     * 查询所有的 UserInfo
      * @return
      */
-    List<User> findAll();
+    List<UserInfo> findAll();
 
 
 
     /**
      * 保存用户信息
      */
-    void saveUserInfo(User user);
+    void saveUserInfo(UserInfo userInfo);
 
 
     /**
      * 根据指定user表中的id 查询 user
      */
-    User findUserById(String userId);
+    UserInfo findUserById(String userId);
 
     /**
      * 根据 roleId 查询uses
      */
-    List<User> findUserByRoleId(String roleId);
+    List<UserInfo> findUserByRoleId(String roleId);
 
 
 

@@ -3,7 +3,7 @@ package com.meiyukai.ssm.domain;
 import java.io.Serializable;
 import java.util.List;
 
-public class User implements Serializable {
+public class UserInfo implements Serializable {
     private String id;
     private String username;
     private String password;
@@ -86,7 +86,7 @@ public class User implements Serializable {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "UserInfo{" +
                 "id='" + id + '\'' +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
