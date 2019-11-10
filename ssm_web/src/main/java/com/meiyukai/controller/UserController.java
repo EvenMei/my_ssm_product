@@ -7,6 +7,7 @@ import com.meiyukai.ssm.domain.Role;
 import com.meiyukai.ssm.domain.UserInfo;
 import com.meiyukai.ssm.service.IRoleService;
 import com.meiyukai.ssm.service.IUserService;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -30,29 +31,31 @@ public class UserController {
     private IRoleService roleService;
 
 
+
+    /**
+     *  保存用户信息
+     */
+    @RequestMapping(value = "/save.do")
+    @PreAuthorize(value = "authentication.principal.username=='meiyukai'")
+    public String saveUserInfo( UserInfo userInfo){
+//        System.out.println("保存用户信息 ：   " + userInfo);
+        userInfo.setId(UUID.randomUUID().toString().replace("-",""));
+        userService.saveUserInfo(userInfo);
+        return "forward:findAll.do";
+    }
+
     /**
      * 查询所有的用户信息
      * @param model
      * @return
      */
     @RequestMapping(value = "/findAll.do")
+//    @PreAuthorize(value ="hasRole('ROLE_ADMIN')")
     public String  findAll(Model model){
         List<UserInfo> userInfos =  userService.findAll();
 //        System.out.println("查找到的所有的 UserInfo    :   "  + userInfos);
         model.addAttribute("userInfos"  , userInfos);
         return "userInfo-list";
-    }
-
-
-    /**
-     *  保存用户信息
-     */
-    @RequestMapping(value = "/save.do")
-    public String saveUserInfo( UserInfo userInfo){
-//        System.out.println("保存用户信息 ：   " + userInfo);
-        userInfo.setId(UUID.randomUUID().toString().replace("-",""));
-        userService.saveUserInfo(userInfo);
-        return "forward:findAll.do";
     }
 
 

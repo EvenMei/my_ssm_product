@@ -2,10 +2,28 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:security="http://www.springframework.org/schema/security"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
     http://www.springframework.org/schema/security
     http://www.springframework.org/schema/security/spring-security.xsd">
+
+    <!--开启方法级 JSR250权限
+    @RolesAllowed : 表示访问对应方法时所应该具有的角色 ；例如@RolesAllowed({"USER","ADMIN"})
+    @PermitAll ：表示允许所有的角色进行访问，不进行权限控制
+    @DenyAll ： 无论什么角色都不可以访问
+    -->
+
+    <security:global-method-security jsr250-annotations="enabled" secured-annotations="enabled" pre-post-annotations="enabled"/>
+
+<!--    <security:global-method-security  jsr250-annotations="enabled"></security:global-method-security>-->
+
+    <!--扫描自定的 检查url 的permission 的SecurityService -->
+        <context:component-scan base-package="com.meiyukai.ssm.service.impl"/>
+    <!--扫描自定的 检查url 的permission 的SecurityService -->
+
 
 
     <!--配置不拦击的资源-->
@@ -17,12 +35,14 @@
     <security:http security="none" pattern="/plugins/**" />
     <!--配置不拦击的资源-->
 
-    <security:http auto-config="true" use-expressions="false">
+    <security:http auto-config="true" use-expressions="true">
         <!-- intercept-url定义一个过滤规则 pattern表示对哪些url进行权限控制，access属性表示在请求对应
         的URL时需要什么权限，
         默认配置时它应该是一个以逗号分隔的角色列表，请求的用户只需拥有其中的一个角色就能成功访问对应
         的URL -->
-        <security:intercept-url pattern="/**"  access="ROLE_ADMIN , ROLE_USER" />
+        <security:intercept-url pattern="/**"  access="hasAnyRole('ROLE_ADMIN','ROLE_USER')" />  <!--access="ROLE_ADMIN , ROLE_USER"-->
+
+        <security:intercept-url pattern="/**" access="isAuthenticated() and @securityService.accessible(authentication , request)" />
         <!-- auto-config配置后，不需要在配置下面信息 <security:form-login /> 定义登录表单信息
         <security:http-basic/> <security:logout /> -->
 

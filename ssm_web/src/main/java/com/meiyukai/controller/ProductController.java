@@ -3,6 +3,7 @@ package com.meiyukai.controller;
 import com.meiyukai.ssm.domain.PageInfo;
 import com.meiyukai.ssm.domain.Product;
 import com.meiyukai.ssm.service.IProductService;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import javax.annotation.security.DenyAll;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
@@ -37,13 +39,18 @@ public class ProductController {
          return mav;
     }*/
 
+
+
     @RequestMapping(value = "/findAll.do")
-    public String findAll(Model model , @RequestParam(value = "pageNum") Integer pageNum, @RequestParam(value = "pageSize") Integer pageSize){
-        System.out.println("pageNum  :  " + pageNum + "-----"  + "pageSize  :  " + pageSize) ;
+//    @RolesAllowed({"ADMIN"})
+//    @Secured(value = {"ROLE_ADMIN"})
+    @PreAuthorize(value = "authentication.principal.username=='meiyukai' ")  //使用 SPEL 表达式
+//    @PreAuthorize(value="hasAnyRole('ROLE_USER','ROLE_ADMIN')")   //使用 SPEL 表达式
+    public String findAll(Model model  , @RequestParam(value = "pageNum") Integer pageNum, @RequestParam(value = "pageSize") Integer pageSize){
+       // System.out.println("pageNum  :  " + pageNum + "-----"  + "pageSize  :  " + pageSize) ;
         PageInfo<Product> pageInfo = service.getPageInfo(pageNum,pageSize);
         System.out.println("----  pageInfo  ---   " + pageInfo);
         model.addAttribute("pageInfo",pageInfo);
-
       return "product-list";
     }
 
@@ -56,6 +63,7 @@ public class ProductController {
      * @return
      */
     @RequestMapping(value = "/save.do")
+    @DenyAll
     public String  save(Product product){
 //        System.out.println("从前端传来的product 是： " + product);
         product.setId(UUID.randomUUID().toString().substring(0,16)); //给主键赋值。
@@ -83,10 +91,7 @@ public class ProductController {
     }
 
 
-
-
-
-    @RequestMapping(value = "main.do")
+    @RequestMapping(value = "/main.do")
     public String test(){
         return "main";
     }

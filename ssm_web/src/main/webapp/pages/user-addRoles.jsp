@@ -132,10 +132,10 @@
                 url:"/userInfo/addNewRoles.do",
                 contentType:"application/json;charset=utf-8",
                 data: JSON.stringify(json_data),
-                // data: {"params": "hello"},
+                // dataType:"json",  //前端返回的数据的格式为 json
                 success:function (data) {
                     alert("message :  "  + data);
-                    window.location.href="/userInfo/findById.do?id="+$("#hidden_id").val();
+                   window.location.href="/userInfo/findById.do?id="+$("#hidden_id").val();
                 }
             });
 

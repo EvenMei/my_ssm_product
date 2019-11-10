@@ -1,5 +1,6 @@
 package com.meiyukai.ssm.dao;
 
+import com.meiyukai.ssm.domain.Permission;
 import com.meiyukai.ssm.domain.QueryVo;
 import com.meiyukai.ssm.domain.Role;
 import org.apache.ibatis.annotations.*;
@@ -33,6 +34,14 @@ public interface IRoleDao {
     @Select(value = "select * from role where id in(select  roleId from users_role where userId  = #{userId})")
     List<Role> findRoleByUserId(String userId);
 
+
+    /**
+     * 根据 id 查询 role
+     */
+    @Select(value="select * from role where id = #{roleId}")
+    @ResultMap(value="role_map")
+    Role findRoleById( String roleId);
+
     /**
      *保存 role
      */
@@ -59,6 +68,14 @@ public interface IRoleDao {
     @Insert(value = "insert into users_role values(#{userId},#{roleId});")
 //    void userAddNewRoles(@Param(value="userId") String userId  , @Param(value = "roleId") String roleId);
     void userAddNewRoles(QueryVo vo);
+
+    /**
+     * 根据 roleId 查询可以选择的权限信息
+     * @param roleId
+     * @return
+     */
+    @Select(value = "select * from permission where id not in(select permissionId from permission_role where roleId = #{roleId} )")
+    List<Permission> findAvailablePermissions(String roleId);
 
 
 }

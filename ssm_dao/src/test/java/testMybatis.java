@@ -242,8 +242,17 @@ public class testMybatis {
         vo.setUserId("7c2e94c20f96477e9864053107649754");
         vo.setRoleId("r02");
         roleDao.userAddNewRoles(vo);
-
      }
+
+     @Test
+     public  void testFindAvailablePermissions(){
+        List<Permission> permissions = roleDao.findAvailablePermissions("r02");
+        for(Permission permission : permissions){
+            System.out.println("permission :   "  + permission) ;
+        }
+     }
+
+
 
 
 

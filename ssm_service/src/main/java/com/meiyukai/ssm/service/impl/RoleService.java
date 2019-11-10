@@ -1,6 +1,7 @@
 package com.meiyukai.ssm.service.impl;
 
 import com.meiyukai.ssm.dao.IRoleDao;
+import com.meiyukai.ssm.domain.Permission;
 import com.meiyukai.ssm.domain.QueryVo;
 import com.meiyukai.ssm.domain.Role;
 import com.meiyukai.ssm.service.IRoleService;
@@ -44,6 +45,16 @@ public class RoleService implements IRoleService {
     @Override
     public void userAddNewRoles(QueryVo vo) {
         roleDao.userAddNewRoles(vo);
+    }
+
+    @Override
+    public Role findRoleById(String roleId) {
+        return roleDao.findRoleById(roleId);
+    }
+
+    @Override
+    public List<Permission> findAvailablePermissions(String roleId) {
+        return roleDao.findAvailablePermissions(roleId);
     }
 
 

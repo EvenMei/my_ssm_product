@@ -3,6 +3,7 @@ package com.meiyukai.ssm.dao;
 import com.meiyukai.ssm.domain.Permission;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
@@ -38,6 +39,13 @@ public interface IPermissionDao  {
      */
     @Delete(value = "delete from permission where id = #{permissionId}")
     void deletePermission(String permissionId);
+
+    /**
+     * 根据permissionId 和 roleId 关联permission 和role
+     */
+    @Insert(value = "insert into permission_role values(#{permissionId} , #{roleId})")
+    void addNewPermissions(@Param(value = "permissionId")String permissionId,  @Param(value="roleId") String roleId);
+
 
 
 }

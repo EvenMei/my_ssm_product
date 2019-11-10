@@ -129,7 +129,7 @@
                // dataType:"json", //设置返回值类型
                success:function (data) {
                    alert(data);
-                   location.href="/product/findAll.do";
+                   location.href="/product/findAll.do?pageNum=1&pageSize=4";
                }
 
            });

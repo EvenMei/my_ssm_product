@@ -77,11 +77,7 @@
             </div>
         </form>
 
-        <div class="social-auth-links text-center">
-            <p>- 或者 -</p>
-            <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-qq"></i> 腾讯QQ用户登录</a>
-            <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-weixin"></i> 微信用户登录</a>
-        </div>
+
         <!-- /.social-auth-links -->
 
         <a href="#">忘记密码</a><br>

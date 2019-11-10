@@ -16,7 +16,7 @@
 
 
 
-    <title>错误！</title>
+    <title>403 权限不足！</title>
     <meta name="description" content="AdminLTE2定制版">
     <meta name="keywords" content="AdminLTE2定制版">
 
@@ -144,12 +144,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                 错误页面
+                403 权限不足 ！
             </h1>
 
             <ol class="breadcrumb">
                 <li><a href="all-admin-index.html"><i class="fa fa-dashboard"></i> 首页</a></li>
-                <li class="active"> 错误</li>
+                <li class="active">权限不足</li>
             </ol>
 
         </section>
@@ -157,13 +157,13 @@
         <!-- Main content -->
         <section class="content">
             <div class="error-page">
-                <h2 class="headline text-yellow"> 错误</h2>
+                <h2 class="headline text-yellow"> 403</h2>
 
                 <div class="error-content">
                     <h3><i class="fa fa-warning text-yellow"></i> Oops! 页面没有找到.</h3>
 
                     <p>
-                        没有找到你请求的页面, 你可以 <a href="./main.jspl">返回到后台首页</a> 或者通过搜索查询
+                        没有找到你请求的页面, 你可以 <a href="/pages/main.jsp">返回到后台首页</a> 或者通过搜索查询
                     </p>
 
                     <form class="search-form">

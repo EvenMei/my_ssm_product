@@ -262,8 +262,25 @@
             <version>5.0.10.RELEASE</version>
         </dependency>
 
+        <!--JSR250 方法级权限-->
 
+       <!-- <dependency>
+            <groupId>javax.annotation</groupId>
+            <artifactId>jsr250-api</artifactId>
+            <version>1.0</version>
+        </dependency>
+-->
         <!--spring security-->
+
+        <!--springSecurity 的 页面标签权限-->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-taglibs</artifactId>
+            <version>5.0.10.RELEASE</version>
+        </dependency>
+        <!--springSecurity 的 页面标签权限-->
+
+
 
     </dependencies>
 

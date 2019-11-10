@@ -1,12 +1,13 @@
 <%--
   Created by IntelliJ IDEA.
   User: meiyukai
-  Date: 2019-11-07
-  Time: 19:05
+  Date: 2019-11-08
+  Time: 15:43
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
+<%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
     <!-- 页面meta -->
@@ -16,7 +17,7 @@
 
 
 
-    <title>错误！</title>
+    <title>角色-添加权限</title>
     <meta name="description" content="AdminLTE2定制版">
     <meta name="keywords" content="AdminLTE2定制版">
 
@@ -24,11 +25,14 @@
 
 
     <!-- Tell the browser to be responsive to screen width -->
-    <meta content="width=device-width,initial-scale=1,maximum-scale=1,userInfo-scalable=no" name="viewport">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
 
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+
+
 
 
     <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
@@ -53,6 +57,7 @@
     <link rel="stylesheet" href="../plugins/ionslider/ion.rangeSlider.skinNice.css">
     <link rel="stylesheet" href="../plugins/bootstrap-slider/slider.css">
     <link rel="stylesheet" href="../plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.css">
+
     <script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
     <script src="../plugins/jQueryUI/jquery-ui.min.js"></script>
     <script>
@@ -109,6 +114,32 @@
             });
         });
 
+        function savePermissions() {
+            //先 获取 roleId
+            var selectList = new Array();
+            $("input[name='Ids']:checked").each(function (i,n) {
+                selectList.push(n.value);
+            });
+
+            //准备好参数
+            var json_data={
+                "roleId" :$("#hidden_id").val(),
+                "selectList":selectList
+            };
+
+            $.ajax({
+                type:"post",
+                url:"/role/addNewPermissions.do",
+                contentType:"application/json;charset=utf-8",
+                data: JSON.stringify(json_data),
+                // dataType:"json",  //前端返回的数据的格式为 json
+                success:function (data) {
+                    alert("message :  "  + data);
+                    window.location.href="/role/findById.do?id="+$("#hidden_id").val();
+                }
+            });
+
+        }
 
         // 设置激活菜单
         function setSidebarActive(tagUri) {
@@ -121,10 +152,27 @@
 
 
         $(document).ready(function() {
-            setSidebarActive("admin-404");
+
+            // 激活导航位置
+            setSidebarActive("admin-datalist");
+
+            // 列表按钮
+            $("#dataList td input[type='checkbox']").iCheck({
+                checkboxClass: 'icheckbox_square-blue',
+                increaseArea: '20%'
+            });
+            // 全选操作
+            $("#selall").click(function() {
+                var clicks = $(this).is(':checked');
+                if (!clicks) {
+                    $("#dataList td input[type='checkbox']").iCheck("uncheck");
+                } else {
+                    $("#dataList td input[type='checkbox']").iCheck("check");
+                }
+                $(this).data("clicks", !clicks);
+            });
         });
     </script>
-
 </head>
 
 <body class="hold-transition skin-purple sidebar-mini">
@@ -140,50 +188,102 @@
     <!-- 导航侧栏 /-->
 
     <!-- 内容区域 -->
+    <!-- @@master = admin-layout.html-->
+    <!-- @@block = content -->
+
     <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
+
+        <!-- 内容头部 -->
         <section class="content-header">
             <h1>
-                 错误页面
+                数据管理
+                <small>角色-添加权限</small>
             </h1>
-
             <ol class="breadcrumb">
-                <li><a href="all-admin-index.html"><i class="fa fa-dashboard"></i> 首页</a></li>
-                <li class="active"> 错误</li>
+                <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
+                <li><a href="#">数据管理</a></li>
+                <li class="active">数据列表</li>
             </ol>
-
         </section>
+        <!-- 内容头部 /-->
 
-        <!-- Main content -->
+        <!-- 正文区域 -->
         <section class="content">
-            <div class="error-page">
-                <h2 class="headline text-yellow"> 错误</h2>
 
-                <div class="error-content">
-                    <h3><i class="fa fa-warning text-yellow"></i> Oops! 页面没有找到.</h3>
-
-                    <p>
-                        没有找到你请求的页面, 你可以 <a href="./main.jspl">返回到后台首页</a> 或者通过搜索查询
-                    </p>
-
-                    <form class="search-form">
-                        <div class="input-group">
-                            <input type="text" name="search" class="form-control" placeholder="搜索">
-
-                            <div class="input-group-btn">
-                                <button type="submit" name="submit" class="btn btn-warning btn-flat"><i class="fa fa-search"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <!-- /.input-group -->
-                    </form>
+            <!-- .box-body -->
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">可选角色列表</h3>
+                    <input type="hidden" value="${role.id}" id="hidden_id">
                 </div>
-                <!-- /.error-content -->
+
+                <div class="box-body">
+
+                    <!-- 数据表格 -->
+                    <div class="table-box">
+
+
+
+                        <!--数据列表-->
+                        <table id="dataList" class="table table-bordered table-striped table-hover dataTable">
+                            <thead>
+                            <tr>
+                                <th class="" style="padding-right:0px;">
+                                    <input id="selall" type="checkbox" class="icheckbox_square-blue">
+                                </th>
+                                <th class="sorting">ID</th>
+                                <th class="sorting">权限名称</th>
+                                <th class="sorting">URL</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            <c:forEach items="${availablePermissions}" var="permission" varStatus="s">
+                                <tr>
+                                    <td><input name="Ids" type="checkbox"  value="${permission.id}" id="${s.index}"></td>
+                                    <td>${permission.id}</td>
+                                    <td>${permission.permissionName}</td>
+                                    <td>${permission.url}</td>
+                                </tr>
+                            </c:forEach>
+
+
+
+                            </tbody>
+
+                        </table>
+                        <!--数据列表/-->
+
+
+
+                    </div>
+                    <!-- 数据表格 /-->
+
+
+                    <div class="row">
+
+                        <div class="col-md-2 data"></div>
+                        <div class="col-md-10 data text-center">
+                            <button type="button" class="btn bg-maroon"  onclick="savePermissions()">保存</button>
+                            <button type="button" class="btn bg-default" onclick="history.back(-1);">返回</button>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- /.box-body -->
+
+
+
+
+
             </div>
-            <!-- /.error-page -->
+
         </section>
-        <!-- /.content -->
+        <!-- 正文区域 /-->
+
     </div>
+    <!-- @@close -->
     <!-- 内容区域 /-->
 
     <!-- 底部导航 -->

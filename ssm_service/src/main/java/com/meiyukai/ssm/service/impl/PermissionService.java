@@ -32,4 +32,9 @@ public class PermissionService implements IPermissionService {
     public void deletePermission(String permissionId) {
         permissionDao.deletePermission(permissionId);
     }
+
+    @Override
+    public void addNewPermissions(String permissionId, String roleId) {
+        permissionDao.addNewPermissions(permissionId,roleId);
+    }
 }

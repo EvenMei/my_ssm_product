@@ -27,4 +27,10 @@ public interface IPermissionService {
      */
     void deletePermission(String permissionId);
 
+    /**
+     * 根据permissionId 和 roleId 关联permission 和role
+     */
+    void addNewPermissions(String permissionId, String roleId);
+
+
 }

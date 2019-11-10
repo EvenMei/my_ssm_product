@@ -13,7 +13,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>数据 - AdminLTE2定制版</title>
+
+
+
+    <title>角色详情</title>
     <meta name="description" content="AdminLTE2定制版">
     <meta name="keywords" content="AdminLTE2定制版">
 
@@ -21,8 +24,9 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width,initial-scale=1,maximum-scale=1,userInfo-scalable=no" name="viewport">
 
-   <%-- <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>--%>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 
 
@@ -250,7 +254,7 @@
         $(document).ready(function() {
 
             // 激活导航位置
-            setSidebarActive("user-manager");
+            setSidebarActive("role-manager");
 
         });
     </script>
@@ -279,7 +283,7 @@
         <!-- 内容头部 -->
         <section class="content-header">
             <h1>
-                数据管理
+                角色详情
                 <small>数据表单</small>
             </h1>
             <ol class="breadcrumb">
@@ -297,109 +301,93 @@
 
                 <!--tab页-->
                 <div class="box box-primary">
-                <div class="nav-tabs-custom">
+                    <div class="nav-tabs-custom">
 
 
-                    <!--tab内容-->
-                    <div class="tab-content">
+                        <!--tab内容-->
+                        <div class="tab-content">
 
-                        <div class="box-header with-border">
-                            <h3 class="box-title">列表</h3>
-                        </div>
-
-
-                        <!--树表格-->
-                        <div class="tab-pane active" id="tab-treetable">
-                            <table id="collapse-table" class="table table-bordered table-hover dataTable">
-                                <thead>
-                                <tr>
-                                    <th>名称</th>
-                                    <th>概述</th>
-                                </tr>
-                                </thead>
+                            <div class="box-header with-border">
+                                <h3 class="box-title">列表</h3>
+                            </div>
 
 
-                                <tr data-tt-id="0">
-                                    <td>${userInfo.username}</td>
-                                </tr>
+                            <!--树表格-->
+                            <div class="tab-pane active" id="tab-treetable">
+                                <table id="collapse-table" class="table table-bordered table-hover dataTable">
+                                    <thead>
+                                    <tr>
+                                        <th>名称</th>
+                                        <th>概述</th>
+                                    </tr>
+                                    </thead>
 
-                                <tbody>
-                                <c:forEach items="${userInfo.roles}" var="role" varStatus="s">
 
-                                    <tr data-tt-id="${s.index+1}" data-tt-parent-id="0">
+                                    <tr data-tt-id="0">
                                         <td>${role.roleName}</td>
-                                        <td>${role.roleDesc}</td>
                                     </tr>
 
-                                    <c:forEach items="${role.permissions}" var="permission" varStatus="s2">
+                                    <tbody>
+                                    <c:forEach items="${role.permissions}" var="permission" varStatus="s1">
 
-                                        <tr data-tt-id="${s.index+1}-${s2.index+1}" data-tt-parent-id="${s.index+1}">
+                                        <tr data-tt-id="${s1.index+1}" data-tt-parent-id="0">
                                             <td>${permission.permissionName}</td>
                                             <td>${permission.url}</td>
                                         </tr>
 
-                                        <%--test delete later--%>
-                                        <%--<c:forEach begin="1" end="2" step="1" varStatus="s3" >
-                                            <tr data-tt-id="${s.index+1}-${s2.index+1}-${s3.index+1}" data-tt-parent-id="${s.index+1}-${s2.index+1}">
-                                                <td>a</td>
-                                                <td>b</td>
-                                            </tr>
-                                        </c:forEach>--%>
 
                                     </c:forEach>
 
-                                </c:forEach>
-
-                                </tbody>
-                            </table>
-                        </div>
-                        <!--树表格/-->
-
-
-
-
-
-                    </div>
-                    <!--tab内容/-->
-
-
-                    <!-- .box-footer-->
-                    <div class="box-footer">
-                        <div class="pull-left">
-                            <div class="form-group form-inline">
-                                总共2 页，共14 条数据。 每页
-                                <select class="form-control">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select> 条
+                                    </tbody>
+                                </table>
                             </div>
-                        </div>
+                            <!--树表格/-->
 
-                        <div class="box-tools pull-right">
-                            <ul class="pagination">
-                                <li>
-                                    <a href="#" aria-label="Previous">首页</a>
-                                </li>
-                                <li><a href="#">上一页</a></li>
-                                <li><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li><a href="#">下一页</a></li>
-                                <li>
-                                    <a href="#" aria-label="Next">尾页</a>
-                                </li>
-                            </ul>
+
+
+
+
                         </div>
+                        <!--tab内容/-->
+
+
+                        <!-- .box-footer-->
+                        <div class="box-footer">
+                            <div class="pull-left">
+                                <div class="form-group form-inline">
+                                    总共2 页，共14 条数据。 每页
+                                    <select class="form-control">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select> 条
+                                </div>
+                            </div>
+
+                            <div class="box-tools pull-right">
+                                <ul class="pagination">
+                                    <li>
+                                        <a href="#" aria-label="Previous">首页</a>
+                                    </li>
+                                    <li><a href="#">上一页</a></li>
+                                    <li><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">下一页</a></li>
+                                    <li>
+                                        <a href="#" aria-label="Next">尾页</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <!-- /.box-footer-->
 
                     </div>
-                    <!-- /.box-footer-->
-
-                </div>
                 </div>
                 <!--tab页/-->
 
