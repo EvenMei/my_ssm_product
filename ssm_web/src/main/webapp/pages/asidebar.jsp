@@ -89,8 +89,8 @@
                             </a>
                         </li>
 
-                        <li id="admin-500">
-                            <a href="all-admin-500.html">
+                        <li id="sysLog-manager">
+                            <a href="/sysLog/findAll.do">
                                 <i class="fa fa-circle-o"></i> 访问日志
                             </a>
                         </li>

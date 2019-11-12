@@ -10,6 +10,8 @@
     http://www.springframework.org/schema/security
     http://www.springframework.org/schema/security/spring-security.xsd">
 
+
+
     <!--开启方法级 JSR250权限
     @RolesAllowed : 表示访问对应方法时所应该具有的角色 ；例如@RolesAllowed({"USER","ADMIN"})
     @PermitAll ：表示允许所有的角色进行访问，不进行权限控制
@@ -42,7 +44,9 @@
         的URL -->
         <security:intercept-url pattern="/**"  access="hasAnyRole('ROLE_ADMIN','ROLE_USER')" />  <!--access="ROLE_ADMIN , ROLE_USER"-->
 
-        <security:intercept-url pattern="/**" access="isAuthenticated() and @securityService.accessible(authentication , request)" />
+        <!--使用自定义的URL 权限认定方法！-->
+<!--        <security:intercept-url pattern="/**" access="isAuthenticated() and @securityService.accessible(authentication , request)" />-->
+
         <!-- auto-config配置后，不需要在配置下面信息 <security:form-login /> 定义登录表单信息
         <security:http-basic/> <security:logout /> -->
 

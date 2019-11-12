@@ -3,7 +3,7 @@ package com.meiyukai.controller;
 import com.meiyukai.ssm.domain.Orders;
 import com.meiyukai.ssm.service.IOrderService;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -22,14 +22,14 @@ public class orderController {
      * @return
      */
     @RequestMapping(value = "/findAll.do")
-    public String demo(Model model){
+    public String findAllOrders(ModelMap model){
         List<Orders> orders = service.findAll();
         model.addAttribute("orders" , orders);
         return "orders-list";
     }
 
     @RequestMapping(value = "/showDetail.do")
-    public String showDetail(@RequestParam(value = "id") String id , Model model){
+    public String showDetail(@RequestParam(value = "id") String id , ModelMap model){
         System.out.println("id :  ---   " + id);
         Orders order  = service.findOrdersById(id);
         model.addAttribute("order"  , order);

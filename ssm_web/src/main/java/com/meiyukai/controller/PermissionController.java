@@ -3,7 +3,7 @@ package com.meiyukai.controller;
 import com.meiyukai.ssm.domain.Permission;
 import com.meiyukai.ssm.service.IPermissionService;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -21,7 +21,7 @@ public class PermissionController {
 
 
     @RequestMapping(value = "/findAll.do")
-    public String findAll(Model model){
+    public String findAllPermissions(ModelMap model){
         List<Permission> permissions =  permissionService.findAll();
         model.addAttribute("permissions"  , permissions) ;
 

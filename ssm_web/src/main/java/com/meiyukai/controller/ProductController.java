@@ -5,7 +5,7 @@ import com.meiyukai.ssm.domain.Product;
 import com.meiyukai.ssm.service.IProductService;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -44,9 +44,10 @@ public class ProductController {
     @RequestMapping(value = "/findAll.do")
 //    @RolesAllowed({"ADMIN"})
 //    @Secured(value = {"ROLE_ADMIN"})
-    @PreAuthorize(value = "authentication.principal.username=='meiyukai' ")  //使用 SPEL 表达式
-//    @PreAuthorize(value="hasAnyRole('ROLE_USER','ROLE_ADMIN')")   //使用 SPEL 表达式
-    public String findAll(Model model  , @RequestParam(value = "pageNum") Integer pageNum, @RequestParam(value = "pageSize") Integer pageSize){
+ //   @Secured(value = "ROLE_DENY_ALL")   //因为根本就不存在这样的角色，所以就等用语 jsr250 的denyAll
+    //@PreAuthorize(value = "authentication.principal.username=='meiyukai' ")  //使用 SPEL 表达式
+    @PreAuthorize(value="hasAnyRole('ROLE_USER','ROLE_ADMIN')")   //使用 SPEL 表达式
+    public String findAllProducts(ModelMap model  , @RequestParam(value = "pageNum") Integer pageNum, @RequestParam(value = "pageSize") Integer pageSize){
        // System.out.println("pageNum  :  " + pageNum + "-----"  + "pageSize  :  " + pageSize) ;
         PageInfo<Product> pageInfo = service.getPageInfo(pageNum,pageSize);
         System.out.println("----  pageInfo  ---   " + pageInfo);
@@ -57,13 +58,12 @@ public class ProductController {
 
 
 
-
     /**
      * 保存商品
      * @return
      */
     @RequestMapping(value = "/save.do")
-    @DenyAll
+    @DenyAll  // 需要 JSR250 的支持
     public String  save(Product product){
 //        System.out.println("从前端传来的product 是： " + product);
         product.setId(UUID.randomUUID().toString().substring(0,16)); //给主键赋值。

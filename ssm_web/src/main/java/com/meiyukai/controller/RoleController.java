@@ -7,7 +7,7 @@ import com.meiyukai.ssm.domain.Role;
 import com.meiyukai.ssm.service.IPermissionService;
 import com.meiyukai.ssm.service.impl.RoleService;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -27,7 +27,7 @@ public class RoleController {
     private IPermissionService permissionService;
 
     @RequestMapping(value = "/findAll.do")
-    public String findAll(Model model){
+    public String findAllRoles(ModelMap model){
         List<Role> roles = roleService.findAll();
         model.addAttribute("roles"  ,  roles) ;
         return "role-list";
@@ -62,7 +62,7 @@ public class RoleController {
      * 根据 roleId 查询 role
      */
     @RequestMapping(value = "/findById.do")
-    public String findRoleById(String id , Model model){
+    public String findRoleById(String id , ModelMap model){
         Role role = roleService.findRoleById(id);
         System.out.println("get ---  role :  " + role);
         model.addAttribute("role" , role);
@@ -73,7 +73,7 @@ public class RoleController {
      * 根据 传入的roleId 添加可以添加的权限信息
      */
     @RequestMapping(value = "/findPermissionAndRoles.do")
-    public String findRoleIdAndAvailableRoles(String id , Model model){
+    public String findRoleIdAndAvailableRoles(String id , ModelMap model){
         Role role = roleService.findRoleById(id);
        List<Permission> permissions = roleService.findAvailablePermissions(id);
        model.addAttribute("role" , role);

@@ -9,7 +9,7 @@ import com.meiyukai.ssm.service.IRoleService;
 import com.meiyukai.ssm.service.IUserService;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -50,21 +50,30 @@ public class UserController {
      * @return
      */
     @RequestMapping(value = "/findAll.do")
-//    @PreAuthorize(value ="hasRole('ROLE_ADMIN')")
-    public String  findAll(Model model){
+    @PreAuthorize(value ="hasRole('ROLE_ADMIN')")
+    public String  findAllUserInfo(ModelMap model){
         List<UserInfo> userInfos =  userService.findAll();
 //        System.out.println("查找到的所有的 UserInfo    :   "  + userInfos);
         model.addAttribute("userInfos"  , userInfos);
         return "userInfo-list";
     }
 
+    //@RequestMapping(value = "/findAll.do")
+    //@PreAuthorize(value ="hasRole('ROLE_ADMIN')")
+    /*public ModelAndView findAllUserInf(){
+        ModelAndView mav = new ModelAndView();
+        List<UserInfo> userInfos =  userService.findAll();
+        mav.addObject("userInfos" , userInfos);
+        mav.setViewName("userInfo-list");
+        return mav;
+    }*/
 
 
     /**
      * 根据指定的id 查询user
      */
     @RequestMapping(value = "/findById.do")
-    public String findById(String id , Model model){
+    public String findById(String id , ModelMap model){
         UserInfo userInfo = userService.findUserById(id);
 //        System.out.println("userinfo :    " + userInfo);
         model.addAttribute("userInfo" , userInfo);
@@ -77,7 +86,7 @@ public class UserController {
      */
 
     @RequestMapping(value = "/findUserByIdAndAllRoles.do")
-    public String findUserByIdAndAllRoles(@RequestParam(value = "id") String userId , Model model){
+    public String findUserByIdAndAllRoles(@RequestParam(value = "id") String userId , ModelMap model){
         //根据 userId 查询用户
         UserInfo userInfo  = userService.findUserById(userId);
 //        System.out.println("查询的用户信息是 ：  " + userInfo);

@@ -8,6 +8,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import javax.annotation.Resource;
 import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath:applicationContext-dao.xml"})
@@ -34,6 +35,9 @@ public class testMybatis {
 
     @Resource(name = "roleDao")
     private IRoleDao roleDao;
+
+    @Resource(name = "sysLogDao")
+    private ISysLogDao sysLogDao;
 
 
 
@@ -251,6 +255,28 @@ public class testMybatis {
             System.out.println("permission :   "  + permission) ;
         }
      }
+
+     @Test
+     public void testInserIntoSysLog(){
+        SysLog sysLog  = new SysLog();
+        sysLog.setId(UUID.randomUUID().toString());
+        sysLog.setVisitTime(new Date());
+        sysLog.setUsername("meiyukai");
+        sysLog.setIp("127.0.1.2");
+        sysLog.setUrl("/user/findAll.do");
+        sysLog.setExecutionTime(new Integer(12342421).longValue());
+        sysLog.setMethod("findUsers");
+        sysLogDao.saveSysLog(sysLog);
+     }
+
+     @Test
+     public void testSaveSysLog(){
+        List<SysLog>  sysLogs = sysLogDao.findAll("meiyukai" );
+        for(SysLog sysLog :  sysLogs){
+            System.out.println("sysLog   :    "   + sysLog );
+        }
+     }
+
 
 
 

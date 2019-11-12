@@ -13,7 +13,8 @@
 	http://www.springframework.org/schema/tx 
 	http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-
+	<!--开启 aop -->
+    <!--<aop:aspectj-autoproxy proxy-target-class="true"/>-->
 
 	<import resource="classpath:applicationContext-dao.xml"></import>
 

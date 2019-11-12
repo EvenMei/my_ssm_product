@@ -10,6 +10,12 @@
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
 
+  <!--全局 request-->
+  <listener>
+    <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+  </listener>
+  <!--全局 request-->
+
   <!--配置文件位置-->
   <context-param>
     <param-name>contextConfigLocation</param-name>

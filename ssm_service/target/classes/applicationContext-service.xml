@@ -14,6 +14,7 @@
 	http://www.springframework.org/schema/tx/spring-tx.xsd">
 
 
+
 	<context:property-placeholder location="classpath:jdbc.properties"/>
 
 	<context:component-scan base-package="com.meiyukai.ssm">
@@ -31,4 +32,15 @@
 	<tx:annotation-driven transaction-manager="transactionManager"/>
 
 	<context:annotation-config/>  <!--在没有component-scan 的前提下注册并激活，同时扫描bean-->
+
+
+	<aop:config>
+		<aop:pointcut id="" expression=""/>
+		<aop:aspect >
+
+		</aop:aspect>
+
+	</aop:config>
+
 </beans>
+
